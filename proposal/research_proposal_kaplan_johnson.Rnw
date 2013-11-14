@@ -37,25 +37,25 @@ f(\omega_r) & \sim \pi(\theta)\\
 f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
 \end{align*}
 
-\mj{In order to implement this method, two fundamental sets of questions need to be explored. These involve
+In order to implement this method, two fundamental sets of questions need to be explored. These involve
 \begin{enumerate}
 \item Prior distributions on $\omega_r$
 \item The asymptotic property relies on fixed frequencies.
 \end{enumerate}
-}
+
 
 \subsection*{Prior Distributions}
-A natural choice of prior for this analysis would be a \mj{conjugate Gamma distribution}. We would also like to explore the possibility of using an improper prior.
+A natural choice of prior for this analysis would be a conjugate Gamma distribution. We would also like to explore the possibility of using an improper prior.
 
 \subsection*{Fixed Frequencies}
-It is common practice when dealing with the periodogram to work with the Fourier frequencies $\mathcal{F}_n$ of which there are $n$. However, the asymptotic result \mj{holds for} a fixed number of frequencies $k$. We would like to explore at what ratio $\frac{k}{n}$ do the approximate independence and exponential distribution \mj{assumptions in the result} break down in the periodogram values.
+It is common practice when dealing with the periodogram to work with the Fourier frequencies $\mathcal{F}_n$ of which there are $n$. However, the asymptotic result holds for a fixed number of frequencies $k$. We would like to explore at what ratio $\frac{k}{n}$ do the approximate independence and exponential distribution assumptions in the result break down in the periodogram values.
 
-The goal would be to develop a procedure to find the largest acceptable $k$ that still maintains \mj{the asymptotic result}. This procedure would be completed before the Bayesian estimation of the spectral density.
+The goal would be to develop a procedure to find the largest acceptable $k$ that still maintains the asymptotic result. This procedure would be completed before the Bayesian estimation of the spectral density.
 
-In order to complete this step, \mj{simulations from known spectral densities will be used to estimate} periodograms created from evenly spaced frequencies chopping up $(0,\pi)$ in decreasing density starting at $n$ (Fourier frequencies). \mj{Monte Carlo approximations of first and second moments and a} $\chi^2$ goodness-of-fit test will be used to \mj{assess} if the \mj{asymptotic result holds}. 
+In order to complete this step, simulations from known spectral densities will be used to estimate periodograms created from evenly spaced frequencies partitioning $(0,\pi)$ in decreasing compactness starting at $n$ (Fourier frequencies). Monte Carlo approximations of first and second moments and a $\chi^2$ goodness-of-fit test will be used to assess if the asymptotic result holds. 
 
 \section*{Application}
-We will use our Bayesian estimation method of the spectral density on a real dataset \mj{of remotely sensed phenology data from India. The data consists of 2500 locations each with a time-series of weekly measurements of chorophyll content over five years. A sample of locations will be used to implement the method.}
+We will use our Bayesian estimation method of the spectral density on a real dataset of remotely sensed phenology data from India. The data consists of 2500 locations each with a time-series of weekly measurements of chorophyll content over five years. A sample of locations will be used to implement the method.
 
 \printbibliography
 \end{document}
