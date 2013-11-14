@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{graphicx, hyperref, soul}
+\usepackage{amssymb,amsmath,amsthm} 
+\usepackage[margin=1.25in]{geometry}
+
+
+\usepackage[backend=bibtex, natbib=true]{biblatex}
+\addbibresource{../references/references.bib}
+
+\usepackage{color}
+\newcommand{\ak}[1]{{\color{magenta} #1}}
+
+\theoremstyle{plain}
+\newtheorem*{res}{Result}
+
+\title{Bayesian Estimation of the Spectral Density \\ {\small Project Proposal}}
+\author{Andee Kaplan \& Maggie Johnson}
+
+\begin{document}
+
+\maketitle
+
+\section*{Main Goal}
+To estimate the spectral density of a stationary time series using Bayesian methods.
+
+\section*{Details}
+\begin{res}
+Let $f(\omega_r) \not= 0, 1 \le r \le k$ where $f$ denotes the spectral density of a stationary time series $\{X_t\}$. Then when $n\rightarrow \infty$ the joint distribution of the periodogram at $\omega_r$, $I_n(\omega_r)$, tends to that of $k$ mutually indepependent random variables distributed as $\text{Exponential}(2\pi f(\omega_r))$ for $0<\omega_r<\pi$ \cite{JAZ:4921656}.
+\end{res}
+
+We would like to use the asymptotic distributional properties of a periodogram to obtain estimates of the spectral density at $\omega_r$.
+
+\begin{align*}
+I_n(\omega_r) |f(\omega_r) &\stackrel{\cdot}{\sim}\text{ indep } \text{Exp}(2\pi f(\omega_r)) \\
+f(\omega_r) & \sim \pi(\theta)\\
+f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
+\end{align*}
+
+There are two sets of questions that need to be explored in order to implement this method, the choice of prior distribution and the fact that the asymptotic property relies on fixed frequencies.
+
+\subsection*{Prior Distributions}
+A natural choice of prior for this analysis would be a Gamma distribution because of conjugacy. We would also like to explore the possibility of using an improper prior.
+
+\subsection*{Fixed Frequencies}
+It is common practice when dealing with the periodogram to work with the Fourier frequencies $\mathcal{F}_n$ of which there are $n$. However, the asymptotic result deals in a fixed number of frequencies $k$. We would like to explore at what ratio $\frac{k}{n}$ do the approximate independence and exponential distribution break down in the periodogram values.
+
+The goal would be to develop a procedure to find the largest acceptable $k$ that still maintains the result of the asymptotic result. This procedure would be completed before the Bayesian estimation of the spectral density.
+
+In order to complete this step, a simulation from a known spectral density will be completed and periodograms created from evenly spaced frequencies chopping up $(0,\pi)$ in decreasing density starting at $n$ (Fourier frequencies). A $\chi^2$ goodness-of-fit test will be used to test if the exponential distribution holds. 
+
+\section*{Application}
+We will use our Bayesian estimation method of the spectral density on a real dataset \ak{Maggie, talk about your data here}.
+
+
+\end{document}

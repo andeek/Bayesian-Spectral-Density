@@ -1,0 +1,50 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{JAZ:4921656}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Walker}{W.}%
+     {A.~M.}{A.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WAM1}
+  \strng{fullhash}{WAM1}
+  \field{sortinit}{W}
+  \verb{doi}
+  \verb 10.1017/S1446788700025921
+  \endverb
+  \field{issn}{1446-8107}
+  \field{issue}{01}
+  \field{pages}{107\bibrangedash 128}
+  \field{title}{Some asymptotic results for the periodogram of a stationary
+  time series}
+  \verb{url}
+  \verb http://journals.cambridge.org/article_S1446788700025921
+  \endverb
+  \field{volume}{5}
+  \field{journaltitle}{Journal of the Australian Mathematical Society}
+  \field{month}{02}
+  \field{year}{1965}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
