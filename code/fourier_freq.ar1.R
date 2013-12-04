@@ -5,7 +5,7 @@ set.seed(1001)
 
 ##Simulate Draws
 M <- 1000 #number of draws
-n <- 230 #length of ts
+n <- 20 #length of ts
 phi <- runif(1,0,1) #causal AR
 sigma2 <- 1
 
@@ -17,6 +17,13 @@ perio.ar1 <- apply(draws.ar1, 2, function(x) periodogram(x, fourier_freq(length(
 
 ##Test against Exponential(f(w)*2*pi)
 spec.ar1 <- spec_ar1(phi, sigma2, fourier_freq(nrow(draws.ar1)))
-exp.ar1 <- t(sapply(spec.ar1, function(x) rexp(1000, x*2*pi))) #independent exponential draws
+exp.ar1 <- t(sapply(spec.ar1, function(x) rexp(1000, 1/(x*2*pi)))) #independent exponential draws
 
 ks.test(apply(perio.ar1, 2, prod), apply(exp.ar1, 2, prod))
+
+qplot(quantile(apply(perio.ar1, 2, prod), seq(0,.99,.01)),quantile(apply(exp.ar1, 2, prod), seq(0,.99,.01))) + geom_abline()
+
+
+
+
+
