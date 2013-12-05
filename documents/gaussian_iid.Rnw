@@ -79,7 +79,7 @@ library(xtable)
 summaries <- rbind(summary(perio.prod),
                   summary(exp.prod))
 rownames(summaries) <- c("Periodogram", "Exponential")
-print(xtable(summaries, caption='Summaries of the products across frequencies of sample periodograms and samples from the Exponential($\\sigma^2$) distribution.'), table.placement='H')
+print(xtable(summaries, caption='Summaries of the products across frequencies of sample periodograms and samples from the Exponential($\\sigma^2$) distribution.', digits=-4), table.placement='H')
 @
 To further investigate the relationship, we look at the quantile-quantile plot for only the first half of quantiles.
 <<qqplot2, echo=FALSE, fig.width=7, fig.height=4, fig.align='center', out.width='0.8\\textwidth', fig.pos='H', fig.cap='Quantile-quantile plot of the product of periodogram values at the Fourier frequencies versus the product of Exp(1) draws.'>>=
