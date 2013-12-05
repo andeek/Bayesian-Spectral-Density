@@ -67,13 +67,13 @@ exp.prod <- apply(exp.gaus, 2, prod)
 
 ks.test(perio.prod, exp.prod)
 @
-From these results we fail to reject $\text{H}_0$, which states that the two samples are from different distributions. Thus there is no evidence that our periodogram values at the fourier frequencies are not independent Exponential($\sigma^2$) random variables. This is consistent with our expectations. Let us also take a look at the quantile-quantile plot.
+From these results we fail to reject $\text{H}_0$, which states that the two samples are from the same distribution. Thus there is no evidence that our periodogram values at the fourier frequencies are not independent Exponential($\sigma^2$) random variables. This is consistent with our expectations. Let us also take a look at the quantile-quantile plot.
 <<qqplot, echo=FALSE, fig.width=7, fig.height=4, fig.align='center', out.width='0.8\\textwidth', fig.pos='H', fig.cap='Quantile-quantile plot of the product of periodogram values at the Fourier frequencies versus the product of Exp(1) draws.'>>=
 qplot(quantile(perio.prod, seq(0,1,.01)),quantile(exp.prod, seq(0,1,.01))) +
   geom_abline() + 
   xlab("Periodogram") + ylab("Exponential Draws") + ggtitle("Quantile-Quantile Plot")
 @
-Clearly, this does not show a good fit between our exponential draws and the periodograms of simulated IID Gaussian data. The vast majority of our samples are actually very close to zero.
+Clearly, this does not show a good fit between our exponential draws and the periodograms of simulated IID Gaussian data. All of our samples are actually very close to zero.
 <<zeros, echo=FALSE, results='asis'>>=
 library(xtable)
 summaries <- rbind(summary(perio.prod),
