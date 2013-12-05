@@ -22,3 +22,7 @@ fourier_freq <- function(n) {
 spec_ar1 <- function(phi, sigma2, w) {
   sigma2/(2*pi)*(1-2*phi*cos(w) + phi^2)^(-1)
 }
+
+spec_iidgaus <- function(sigma2){
+  sigma2/(2*pi)
+}

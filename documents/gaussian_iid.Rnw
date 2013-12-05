@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{graphicx, hyperref, soul, float}
+\usepackage{amssymb,amsmath,amsthm} 
+\usepackage[margin=1.25in]{geometry}
+
+
+\usepackage[backend=bibtex, natbib=true]{biblatex}
+%\addbibresource{../references/references.bib}
+
+\usepackage{color}
+\newcommand{\ak}[1]{{\color{magenta} #1}}
+\newcommand{\mj}[1]{{\color{blue} #1}}
+
+\theoremstyle{plain}
+\newtheorem*{res}{Result}
+
+\title{Bayesian Estimation of the Spectral Density \\ {\small Gaussian IID Case}}
+\author{Andee Kaplan \& Maggie Johnson}
+
+\begin{document}
+
+\maketitle
+
+\section*{Purpose}
+To check our testing procedure on a model with exact results. This will ensure that our procedure is reasonable and that when we see a periodogram at sparse frequencies does not behave as independent Exponential distribution, that we can trust this result.
+
+\section*{Theoretical Result}
+
+\begin{res}
+For $\{X_t\} \stackrel{\text{IID}}{\sim} \text{N}(0,\sigma^2)$, the periodogram values $\left\{ I_n(\omega_j): \omega_j \in \mathcal{F}_n, \omega_j \not\in \{0,\pi\} \right\}$ are IID Exponential($\sigma^2$) random variables.
+\end{res}
+
+\section*{Testing Procedure}
+
+\begin{enumerate}
+\item Simulate $M$ draws from $X_1,\dots, X_n$ where $\{X_t\} \stackrel{\text{IID}}{\sim} \text{N}(0,\sigma^2)$
+\item Obtain $M$ periodograms using the fourier frequencies from $(0, \pi)$, $\omega_j = \frac{2\pi j}{n}: j = 1, \dots, \lfloor n/2 \rfloor$
+\item Simulate $M \times n$ draws from $\text{Exp}(\sigma^2)$
+\item Multiply periodograms across frequencies to obtain $M$ periodogram products.
+\item Multiply exponential draws across $n$ to obtain $M$ draws from the product of exponential distributions (joint distribution)
+\item Compare product data using a Kolmogorov-Smirnov test and examining a quantile-quantile plot
+\end{enumerate}
+
+We anticipate that the KS test with fail to reject the null hypethesis, giving no indication that the samples are drawn from different distributions. Similarly, we expect that the quantile-quantile plot comparing the periodogram to exponentials should indicate a good fit.
+
+\section*{Results}
+Using $M = 1000, n = 500, \sigma^2 = 1$, the K-S test statistic and p-value are:
+<<ks-test, echo=FALSE, warning=FALSE, message=FALSE>>=
+set.seed(12)
+
+source("../code/udf_20131202.r")
+M <- 1000
+n <- 500
+sigma2 <- 1
+
+draws.gaus <- sapply(1:M, function(x) rnorm(n, 0 ,sqrt(sigma2)))
+
+##Get periodograms at fourier frequencies
+perio.gaus <- apply(draws.gaus, 2, function(x) periodogram(x, fourier_freq(length(x)), center=TRUE, plot=FALSE)$spec)
+
+##Test against Exponential(f(w)*2*pi)
+spec.gaus <- spec_iidgaus(sigma2)
+exp.gaus <- matrix(rexp(M*nrow(perio.gaus), 1/(spec.gaus*2*pi)), nrow=nrow(perio.gaus), ncol=M) #independent exponential draws
+
+perio.prod <- apply(perio.gaus, 2, prod)
+exp.prod <- apply(exp.gaus, 2, prod)
+
+ks.test(perio.prod, exp.prod)
+@
+From these results we fail to reject $\text{H}_0$, which states that the two samples are from different distributions. Thus there is no evidence that our periodogram values at the fourier frequencies are not independent Exponential($\sigma^2$) random variables. This is consistent with our expectations. Let us also take a look at the quantile-quantile plot.
+<<qqplot, echo=FALSE, fig.width=7, fig.height=4, fig.align='center', out.width='0.8\\textwidth', fig.pos='H', fig.cap='Quantile-quantile plot of the product of periodogram values at the Fourier frequencies versus the product of Exp(1) draws.'>>=
+qplot(quantile(perio.prod, seq(0,1,.01)),quantile(exp.prod, seq(0,1,.01))) +
+  geom_abline() + 
+  xlab("Periodogram") + ylab("Exponential Draws") + ggtitle("Quantile-Quantile Plot")
+@
+Clearly, this does not show a good fit between our exponential draws and the periodograms of simulated IID Gaussian data. The vast majority of our samples are actually very close to zero.
+<<zeros, echo=FALSE, results='asis'>>=
+library(xtable)
+summaries <- rbind(summary(perio.prod),
+                  summary(exp.prod))
+rownames(summaries) <- c("Periodogram", "Exponential")
+print(xtable(summaries, caption='Summaries of the products across frequencies of sample periodograms and samples from the Exponential($\\sigma^2$) distribution.'), table.placement='H')
+@
+To further investigate the relationship, we look at the quantile-quantile plot for only the first half of quantiles.
+<<qqplot2, echo=FALSE, fig.width=7, fig.height=4, fig.align='center', out.width='0.8\\textwidth', fig.pos='H', fig.cap='Quantile-quantile plot of the product of periodogram values at the Fourier frequencies versus the product of Exp(1) draws.'>>=
+qplot(quantile(perio.prod, seq(0,.5,.01)),quantile(exp.prod, seq(0,.5,.01))) +
+  geom_abline() + 
+  xlab("Periodogram") + ylab("Exponential Draws") + ggtitle("Quantile-Quantile Plot")
+@
+By zooming in on the first half of the points we can see there is a closer relationship between the quantiles, however not as linear as we would expect, given the exact result above. 
+
+\section*{The Problem}
+By taking the product of our periodograms (and exponential draws) over each frequency $\frac{n}{2}$ times, we are essentially amplifying the probability of obtaining values very close to zero. To illustrate this behavior, compare the Exp(1) density to the product of 50 Exp(1) densities.
+<<density, echo=FALSE, fig.width=5, fig.height=3.5, fig.pos='H', fig.show='hold', out.width='.49\\textwidth', fig.cap='Comparison of the Exp(1) density to the product of 50 Exp(1) densities.'>>=
+x <- seq(0, 3, by=.001)
+qplot(x, dexp(x, 1), geom="line") + xlab("") + ylab("density") + ggtitle("Density of Exp(1)")
+qplot(x, dexp(x, 1)^50, geom="line") + xlab("") + ylab("density") + ggtitle("Density of the product of 50 Exp(1)")
+
+@
+In our example above, we are actually taking the product of 249 Exp(1) distributions, leading to many values almose indistinguishable from zero (in the order of $10^\Sexpr{floor(log10(min(perio.prod)))}$).
+
+With this in mind, the question becomes {\bf how robust is the Kolmogorov-Smirnov test to many values close to zero and is there a better way to test for independence as well as distribution?}
+
+\end{document}
