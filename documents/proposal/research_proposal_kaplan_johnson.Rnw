@@ -5,7 +5,7 @@
 
 
 \usepackage[backend=bibtex, natbib=true]{biblatex}
-\addbibresource{../references/references.bib}
+\addbibresource{../../references/references.bib}
 
 \usepackage{color}
 \newcommand{\ak}[1]{{\color{magenta} #1}}

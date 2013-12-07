@@ -48,7 +48,7 @@ Using $M = 1000, n = 500, \sigma^2 = 1$, the K-S test statistic and p-value are:
 <<ks-test, echo=FALSE, warning=FALSE, message=FALSE>>=
 set.seed(12)
 
-source("../code/udf_20131202.r")
+source("../../code/udf_20131202.r")
 M <- 1000
 n <- 500
 sigma2 <- 1
