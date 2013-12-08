@@ -22,3 +22,45 @@ fourier_freq <- function(n) {
 spec_ar1 <- function(phi, sigma2, w) {
   sigma2/(2*pi)*(1-2*phi*cos(w) + phi^2)^(-1)
 }
+
+spec_iidgaus <- function(sigma2){
+  sigma2/(2*pi)
+}
+
+spec_arma <- function(model, sigma2, w) {
+  require(polynom)
+  
+  stopifnot(is.list(model))
+
+  if (length(model$ar)) {
+    minroots <- min(Mod(polyroot(c(1, -model$ar))))
+    if (minroots <= 1) 
+      stop("'ar' part of model is not stationary")
+  }  
+  
+  phi <- model$ar
+  theta <- model$ma
+  
+  if(length(phi)) phi <- -phi
+  
+  ar.poly <- as.function(polynomial(coef=c(1,phi)))
+  ma.poly <- as.function(polynomial(coef=c(1,theta)))
+  
+  ar.poly(complex(real=cos(w), imaginary=sin(w)))
+  ma.poly(complex(real=cos(w), imaginary=sin(w)))
+  
+  sigma2/(2*pi)*(Mod(ma.poly(complex(real=cos(w), imaginary=sin(w)))))^2/(Mod(ar.poly(complex(real=cos(w), imaginary=sin(w)))))^2
+}
+
+test_exp <- function(data, freq, spec, alpha) {
+  perio <- apply(data, 2, function(x) periodogram(x, freq, center=TRUE, plot=FALSE)$spec)
+  
+  ks <- NULL
+  for(i in 1:length(spec)){
+    p <- ks.test(perio[i,], "pexp", 1/(spec[i]*2*pi))$p.value
+    ks <- c(ks, p)
+  }
+  
+  return(list(pvals=ks, fails=which(ks < alpha)))
+}
+
