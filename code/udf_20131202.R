@@ -54,7 +54,13 @@ spec_arma <- function(model, sigma2, w) {
 
 test_exp <- function(data, freq, spec, alpha) {
   perio <- apply(data, 2, function(x) periodogram(x, freq, center=TRUE, plot=FALSE)$spec)
-  ks <- apply(perio, 1, function(x) ks.test(x, "pexp", 2*pi*spec)$p.value)            
+  
+  ks <- NULL
+  for(i in 1:length(spec)){
+    p <- ks.test(perio[i,], "pexp", 1/(spec[i]*2*pi))$p.value
+    ks <- c(ks, p)
+  }
+  
   return(list(pvals=ks, fails=which(ks < alpha)))
 }
 
