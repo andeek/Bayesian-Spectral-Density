@@ -52,9 +52,7 @@ spec_arma <- function(model, sigma2, w) {
   sigma2/(2*pi)*(Mod(ma.poly(complex(real=cos(w), imaginary=sin(w)))))^2/(Mod(ar.poly(complex(real=cos(w), imaginary=sin(w)))))^2
 }
 
-test_exp <- function(data, freq, spec, alpha) {
-  perio <- apply(data, 2, function(x) periodogram(x, freq, center=TRUE, plot=FALSE)$spec)
-  
+test_exp <- function(data, perio, spec, alpha) {  
   ks <- NULL
   for(i in 1:length(spec)){
     p <- ks.test(perio[i,], "pexp", 1/(spec[i]*2*pi))$p.value
