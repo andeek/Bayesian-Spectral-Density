@@ -15,12 +15,18 @@ perio.gaus <- perio.gaus*2
 spec.gaus <- spec_iidgaus(sigma2)
 exp.gaus <- matrix(rexp(M*nrow(perio.gaus), 1/(spec.gaus*2*pi)*1/2), nrow=nrow(perio.gaus), ncol=M) #independent exponential draws
 
-ks.test(apply(perio.gaus, 2, prod), apply(exp.gaus, 2, prod))
+ks.test(apply(perio.gaus, 2, prod), apply(exp.gaus, 2, prod))$p.value
 
 qplot(quantile(apply(perio.gaus, 2, prod), seq(0,.6,.01)),quantile(apply(exp.gaus, 2, prod), seq(0,.6,.01))) + geom_abline() 
 
 
 qplot(dnorm(seq(0,.95,.001)), )
 
+pv<-NULL
+for(i in 1:nrow(perio.gaus)){
+  p<-ks.test(perio.gaus[i,], pexp)$p.value
+  pv<-c(pv,p)
+}
+sum(pv < 0.01)
 
 
