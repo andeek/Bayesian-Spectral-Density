@@ -62,3 +62,12 @@ test_exp <- function(data, perio, spec, alpha) {
   return(list(pvals=ks, fails=which(ks < alpha)))
 }
 
+
+# Function to test evenly spaced pairs
+test_ind_evenly <- function(perio, freq, space, alpha) {
+  if(space > length(freq) - 2) stop("space between Fourier frequencies is too large")
+  pairs<-data.frame(x=seq(1,(length(freq)-space-1),1), y=seq(1+(space+1), length(freq),1))
+  pvals<-apply(pairs, 1, function(x) cor.test(perio[x[1],], perio[x[2],], method="spearman")$p.value)
+  return(list(pvals=pvals, freq_pairs=pairs, pairs_fails=pairs[which(pvals < alpha),], pval_fails=pvals[pvals < alpha], prop_fails=sum(pvals < alpha)/nrow(pairs)))
+}
+
