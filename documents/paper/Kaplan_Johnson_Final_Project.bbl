@@ -1,0 +1,69 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{brockwell2002introduction}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Brockwell}{B.}%
+     {Peter~J}{P.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Davis}{D.}%
+     {Richard~A}{R.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Taylor \& Francis US}%
+  }
+  \strng{namehash}{BPJDRA1}
+  \strng{fullhash}{BPJDRA1}
+  \field{sortinit}{B}
+  \field{title}{Introduction to time series and forecasting}
+  \field{year}{2002}
+\endentry
+
+\entry{lahiri2003necessary}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Lahiri}{L.}%
+     {SN}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Institute of Mathematical Statistics}%
+  }
+  \strng{namehash}{LS1}
+  \strng{fullhash}{LS1}
+  \field{sortinit}{L}
+  \field{number}{2}
+  \field{pages}{613\bibrangedash 641}
+  \field{title}{A necessary and sufficient condition for asymptotic
+  independence of discrete Fourier transforms under short-and long-range
+  dependence}
+  \field{volume}{31}
+  \field{journaltitle}{The Annals of Statistics}
+  \field{year}{2003}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -1,0 +1,23 @@
+We used three separate models to explore the asymptotic behavior of the periodogram. The included models are \begin{inparaenum}[\itshape a\upshape)]
+\item IID Gaussian(0, \Sexpr{sigma2});
+\item AR(1) with $\phi = \Sexpr{model.ar1$ar}$; and
+\item AR(4) with $\boldsymbol{\phi} = [\Sexpr{paste(model.ar4$ar, collapse=", ")}$].
+\end{inparaenum}
+
+\subsubsection*{IID Gaussian}
+The following result about the IID Gaussian model gives us knowledge of the exact, rather than asymptotic, behavior of the periodogram at any frequency.
+
+\begin{res}
+For $\{X_t\} \stackrel{\text{IID}}{\sim} \text{N}(0,\sigma^2)$, the periodogram values $\left\{ I_n(\omega_j): \omega_j \in \mathcal{F}_n, \omega_j \not\in \{0,\pi\} \right\}$ are IID Exponential($\sigma^2$) random variables \cite{brockwell2002introduction}.
+\end{res}
+
+We use this model as a sanity check on our testing procedure. Should our procedure show failure with the IID Gaussian model, then this is an indication of an issue with the procedure, rather than the frequency spacings.
+
+\subsubsection*{ARMA(p,q)}
+We used exclusively ARMA models as our experimental models because the spectral density of an ARMA model has a known and closed form. An ARMA model is a process $\{X_t\}$ with the form $\phi(B)X_t = \theta(B)Z_t$ where $B$ is the backshift operator and $\{Z_t\}$ is WN(0,$\sigma^2$). Models of this form have spectral density
+
+\begin{align*}
+f_X(\omega) = \frac{\sigma^2}{2\pi} \frac{|\theta(e^{-i \omega}|^2}{|\phi(e^{-i \omega}|^2}, \omega \in [-\pi, \pi] \text{\cite{brockwell2002introduction}}.
+\end{align*}
+
+Without the exact knowledge of the spectral density function, we would not be able to test the distributions of the periodogram at each fequencies. 

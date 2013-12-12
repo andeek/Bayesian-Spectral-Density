@@ -52,7 +52,7 @@ qplot(data=fails.exp.sim.ar1, x=fails.exp.ar1, y=prop, geom="line") +
   geom_hline(aes(yintercept=0.01)) + 
   geom_smooth(method="loess") +
   xlab("Frequency") + ylab("Proportion of Fails") +
-  ggtitle(expression(paste("AR(1), ", theta, " = 0.5", sep="")))
+  ggtitle(expression(paste("AR(1), ", phi, " = 0.5", sep="")))
 
 
 fails.exp.ar4 <- NULL
@@ -74,5 +74,5 @@ qplot(data=fails.exp.sim.ar4, x=fails.exp.ar4, y=prop, geom="line") +
   geom_hline(aes(yintercept=0.01)) + 
   geom_smooth(method="loess") +
   xlab("Frequency") + ylab("Proportion of Fails") +
-  ggtitle(bquote(paste("AR(4), ", theta, " = [",.(paste(model.ar4$ar, collapse=", ")),"]", sep="")))
+  ggtitle(bquote(paste("AR(4), ", phi, " = [",.(paste(model.ar4$ar, collapse=", ")),"]", sep="")))
 

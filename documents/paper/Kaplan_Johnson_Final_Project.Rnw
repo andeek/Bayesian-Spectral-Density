@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx, hyperref, float, multicol, pdflscape, enumerate, paralist}
+\usepackage{amssymb,amsmath,amsthm} 
+\usepackage[backend=bibtex, natbib=true]{biblatex}
+\addbibresource{../references/references.bib}
+
+\usepackage{color}
+\newcommand{\ak}[1]{{\color{magenta} #1}}
+\newcommand{\mj}[1]{{\color{blue} #1}}
+
+\theoremstyle{plain}
+\newtheorem{res}{Result}
+
+\setlength{\parindent}{0cm}
+
+\title{Bayesian Estimation of the Spectral Density}
+\author{Andee Kaplan \& Maggie Johnson}
+
+\begin{document}
+
+\maketitle
+<<load-data, echo=FALSE, warning=FALSE, error=FALSE>>=
+load("../../tests.RData")
+@
+
+
+\section*{Motivation}
+<<problem, child='parts/motivation.Rnw', eval=TRUE>>=
+@
+
+\section*{Background and Problem Statement}
+<<background, child='parts/background.Rnw', eval=TRUE>>=
+@
+
+\section*{Procedures}
+<<procedures, child='parts/procedures.Rnw', eval=TRUE>>=
+@
+
+\subsection*{Models}
+<<models, child='parts/models.Rnw', eval=TRUE>>=
+@
+
+\subsection*{Tests}
+<<tests, child='parts/tests.Rnw', eval=TRUE>>=
+@
+
+\section*{Results}
+\section*{Discussion}
+
+\printbibliography
+
+\end{document}

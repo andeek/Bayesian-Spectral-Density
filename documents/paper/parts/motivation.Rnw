@@ -1,0 +1,7 @@
+To estimate the spectral density of a stationary time series using Bayesian methods using the asymptotic distributional properties of a periodogram. The motivation behind this work is the following model.
+
+\begin{align*}
+I_n(\omega_r) |f(\omega_r) &\stackrel{\cdot}{\sim}\text{ indep } \text{Exp}(2\pi f(\omega_r)) \\
+f(\omega_r) & \sim \pi(\theta)\\
+f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
+\end{align*}

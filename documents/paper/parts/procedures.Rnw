@@ -1,0 +1,11 @@
+We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
+
+\begin{enumerate}
+\item Simulate $M$ draws from $X_1,\dots, X_n$ where $\{X_t\}$ is a stationary time series from one of three models.
+\item \label{perio}Obtain $M$ periodograms using the fourier frequencies from $(0, \pi)$, $\omega_j = \frac{2\pi j}{n}: j = 1, \dots, \lfloor n/2 \rfloor$.
+\item Obtain $\lfloor\frac{n-1}{2}\rfloor$ values of the spectral density at each fourier frequency $f(\omega_j)$. These will be known by design.
+\item Simulate $M$ draws from the $\lfloor\frac{n-1}{2}\rfloor$ different distributions $\text{Exp}(2\pi f(\omega_r))$
+\item \label{test:exp}Test the distribution of the $M$ values of periodograms at each fourier frequency separately. Store the number of failed tests at each frequency.
+\item \label{test:indep}Test the pairwise independence of each neighboring $M$ values of periodograms at each fourier frequency. Store the number of failed tests at each frequency.
+\item Inspect the results from steps~\ref{test:exp} and \ref{test:indep} to determine if different spacings of frequencies are needed. If so, use sparcer frequencies and repeat from step~\ref{perio} at the chosen frequencies rather than fourier frequencies.
+\end{enumerate}
