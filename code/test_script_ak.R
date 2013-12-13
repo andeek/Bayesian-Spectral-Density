@@ -9,8 +9,15 @@ alpha <- 0.05
 freq <- fourier_freq(n)
 
 model.iid <- list()
+
 model.ar1 <- list(ar=0.5)
-model.ar4 <- list(ar=c(.075, .3, .1, .45))
+model.ar4 <- list(ar=round(c(0.07794297, 0.32976393, 0.10472191, 0.45397725),2))
+
+model.ma1 <- list(ma=0.7)
+model.ma2 <- list(ma=0.7, 0.3)
+
+model.arma41 <- list(ar=round(c(0.07794297, 0.32976393, 0.10472191, 0.45397725),2), ma=c(.7))
+model.arma42 <- list(ar=round(c(0.07794297, 0.32976393, 0.10472191, 0.45397725),2), ma=c(.7,.3))
 
 sim_ind_tests<-function(model, freq, space=0, s=200, M=1000, alpha=0.05, sigma2=1){
   require(plyr)
@@ -42,7 +49,7 @@ g_exp.iid <- qplot(data=tests.iid$pro_fails.exp, x=es, y=prop, geom="line") +
   xlab("Frequency") + ylab("Proportion of Fails") +
   ggtitle("IID Gaussian(0,1) - Distribution")
 
-g_ind.iid <- qplot(1:length(tests.iid), tests.iid$prop_fails.ind, geom="line") + 
+g_ind.iid <- qplot(1:length(tests.iid$prop_fails.ind), tests.iid$prop_fails.ind, geom="line") + 
   geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
   xlab("Frequency") + ylab("Proportion of Fails") +
   ggtitle("IID Gaussian(0,1) - Independence")
@@ -55,27 +62,87 @@ g_exp.ar1 <- qplot(data=tests.ar1$pro_fails.exp, x=es, y=prop, geom="line") +
   geom_hline(aes(yintercept=alpha)) + 
   geom_smooth(method="loess") +
   xlab("Frequency") + ylab("Proportion of Fails") +
-  ggtitle(expression(paste("AR(1), ", phi, " = 0.5", sep="")))
+  ggtitle(expression(paste("AR(1), ", phi, " = 0.5", "- Distribution" sep="")))
 
-g_ind.ar1 <- qplot(1:length(tests.ar1), tests.ar1$prop_fails.ind, geom="line") + 
+g_ind.ar1 <- qplot(1:length(tests.ar1$prop_fails.ind), tests.ar1$prop_fails.ind, geom="line") + 
   geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
   xlab("Frequency") + ylab("Proportion of Fails") +
-  ggtitle("IID Gaussian(0,1) - Independence")
+  ggtitle(expression(paste("AR(1), ", phi, " = 0.5", "- Independence" sep="")))
 
 save.image(file="tests.RData")
 
 tests.ar4<-sim_ind_tests(model.ar4, freq)
 
-g_exp.ar4 <- qplot(data=tests.ar1$pro_fails.exp, x=es, y=prop, geom="line") + 
+g_exp.ar4 <- qplot(data=tests.ar4$pro_fails.exp, x=es, y=prop, geom="line") + 
   geom_hline(aes(yintercept=alpha)) + 
   geom_smooth(method="loess") +
   xlab("Frequency") + ylab("Proportion of Fails") +
-  ggtitle(bquote(paste("AR(4), ", phi, " = [",.(paste(model.ar4$ar, collapse=", ")),"]", sep="")))
+  ggtitle(bquote(paste("AR(4), ", phi, " = [",.(paste(model.ar4$ar, collapse=", ")),"] - Distribution", sep="")))
 
-g_ind.ar4 <- qplot(1:length(tests.ar4), tests.ar1$prop_fails.ind, geom="line") + 
+g_ind.ar4 <- qplot(1:length(tests.ar4$prop_fails.ind), tests.ar4$prop_fails.ind, geom="line") + 
   geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
   xlab("Frequency") + ylab("Proportion of Fails") +
-  ggtitle("IID Gaussian(0,1) - Independence")
+  ggtitle(bquote(paste("AR(4), ", phi, " = [",.(paste(model.ar4$ar, collapse=", ")),"] - Independence", sep="")))
+
+save.image(file="tests.RData")
+
+tests.ma1<-sim_ind_tests(model.ma1, freq)
+
+g_exp.ma1 <- qplot(data=tests.ma1$pro_fails.exp, x=es, y=prop, geom="line") + 
+  geom_hline(aes(yintercept=alpha)) + 
+  geom_smooth(method="loess") +
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("MA(1), ", theta, " = [",.(paste(model.ma1$ma, collapse=", ")),"]  - Distribution", sep="")))
+
+g_ind.ma1 <- qplot(1:length(tests.ma1$prop_fails.ind), tests.ma1$prop_fails.ind, geom="line") + 
+  geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("MA(1), ", theta, " = [",.(paste(model.ma1$ma, collapse=", ")),"]  - Independence", sep="")))
+
+save.image(file="tests.RData")
+
+tests.ma2<-sim_ind_tests(model.ma2, freq)
+
+g_exp.ma2 <- qplot(data=tests.ma2$pro_fails.exp, x=es, y=prop, geom="line") + 
+  geom_hline(aes(yintercept=alpha)) + 
+  geom_smooth(method="loess") +
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("MA(2), ", theta, " = [",.(paste(model.ma1$ma, collapse=", ")),"]  - Distribution", sep="")))
+
+g_ind.ma2 <- qplot(1:length(tests.ma2$prop_fails.ind), tests.ma2$prop_fails.ind, geom="line") + 
+  geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("MA(2), ", theta, " = [",.(paste(model.ma2$ma, collapse=", ")),"]  - Independence", sep="")))
+
+save.image(file="tests.RData")
+
+tests.arma41<-sim_ind_tests(model.arma41, freq)
+
+g_exp.arma41 <- qplot(data=tests.arma41$pro_fails.exp, x=es, y=prop, geom="line") + 
+  geom_hline(aes(yintercept=alpha)) + 
+  geom_smooth(method="loess") +
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("ARMA(4,1), ", phi, " = [",.(paste(model.arma41$ar, collapse=", ")),"], ",theta, " = [",.(paste(model.arma41$ma, collapse=", ")),"]  - Distribution", sep="")))
+
+g_ind.arma41 <- qplot(1:length(tests.arma41$prop_fails.ind), tests.arma41$prop_fails.ind, geom="line") + 
+  geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("ARMA(4,2), ", phi, " = [",.(paste(model.arma42$ar, collapse=", ")),"], ",theta, " = [",.(paste(model.arma42$ma, collapse=", ")),"]  - Independence", sep="")))
+
+save.image(file="tests.RData")
+
+tests.arma42<-sim_ind_tests(model.arma42, freq)
+
+g_exp.arma42 <- qplot(data=tests.arma42$pro_fails.exp, x=es, y=prop, geom="line") + 
+  geom_hline(aes(yintercept=alpha)) + 
+  geom_smooth(method="loess") +
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("ARMA(4,2), ", phi, " = [",.(paste(model.arma42$ar, collapse=", ")),"], ",theta, " = [",.(paste(model.arma42$ma, collapse=", ")),"]  - Distribution", sep="")))
+
+g_ind.arma42 <- qplot(1:length(tests.arma42$prop_fails.ind), tests.arma42$prop_fails.ind, geom="line") + 
+  geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
+  xlab("Frequency") + ylab("Proportion of Fails") +
+  ggtitle(bquote(paste("ARMA(4,2), ", phi, " = [",.(paste(model.arma42$ar, collapse=", ")),"], ",theta, " = [",.(paste(model.arma42$ma, collapse=", ")),"]  - Independence", sep="")))
 
 save.image(file="tests.RData")
 
