@@ -46,6 +46,9 @@ load("../../tests.RData")
 @
 
 \section{Results}
+<<results, child='parts/results.Rnw', eval=TRUE>>=
+@
+
 \section{Discussion}
 <<discussion, child='parts/discussion.Rnw', eval=TRUE>>=
 @

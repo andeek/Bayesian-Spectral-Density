@@ -1,0 +1,87 @@
+<<load-plots, echo=FALSE>>=
+source("../../../code/plots.R")
+@
+
+\subsection*{IID Gaussian}
+<<inital-iid, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of a Gaussian IID Model.', fig.pos='H'>>=
+g_draws.iid
+g_perio.iid
+g_spec.iid
+@
+
+<<tests-iid, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for a Gaussian IID Model.', fig.pos='H'>>=
+g_ind.iid
+g_exp.iid
+@
+
+\subsection*{AR(1)}
+<<inital-ar1, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an AR(1) model.', fig.pos='H'>>=
+g_draws.ar1
+g_perio.ar1
+g_spec.ar1
+@
+
+<<tests-ar1, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an AR(1) model.', fig.pos='H'>>=
+g_ind.ar1
+g_exp.ar1
+@
+
+\subsection*{AR(4)}
+<<inital-ar4, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an AR(4) model.', fig.pos='H'>>=
+g_draws.ar4
+g_perio.ar4
+g_spec.ar4
+@
+
+<<tests-ar4, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an AR(4) model.', fig.pos='H'>>=
+g_ind.ar4
+g_exp.ar4
+@
+
+\subsection*{MA(1)}
+<<inital-ma1, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an MA(1) model.', fig.pos='H'>>=
+g_draws.ma1
+g_perio.ma1
+g_spec.ma1
+@
+
+<<tests-ma1, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an MA(1) model.', fig.pos='H'>>=
+g_ind.ma1
+g_exp.ma1
+@
+
+\subsection*{MA(2)}
+<<inital-ma2, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an MA(2) model.', fig.pos='H'>>=
+g_draws.ma2
+g_perio.ma2
+g_spec.ma2
+@
+
+<<tests-ma2, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an MA(2) model.', fig.pos='H'>>=
+g_ind.ma2
+g_exp.ma2
+@
+
+\subsection*{ARMA(4,1)}
+<<inital-arma41, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an ARMA(4,1) model.', fig.pos='H'>>=
+g_draws.arma41
+g_perio.arma41
+g_spec.arma41
+@
+
+<<tests-arma41, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an ARMA(4,1) model.', fig.pos='H'>>=
+g_ind.arma41
+g_exp.arma41
+@
+
+\subsection*{ARMA(4,2)}
+<<inital-arma42, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an ARMA(4,2) model.', fig.pos='H'>>=
+g_draws.arma42
+g_perio.arma42
+g_spec.arma42
+@
+
+<<tests-arma42, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an ARMA(4,2) model.', fig.pos='H'>>=
+g_ind.arma42
+g_exp.arma42
+@

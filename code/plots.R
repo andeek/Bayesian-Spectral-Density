@@ -1,6 +1,5 @@
 library(ggplot2)
-
-load("../tests.RData")
+load("../../../tests.RData")
 
 g_draws.iid <- qplot(1:n, draws.iid[,1], geom="line") +
   xlab("Time") + ylab("Data") +
