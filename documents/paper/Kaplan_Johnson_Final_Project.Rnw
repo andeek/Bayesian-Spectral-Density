@@ -13,6 +13,7 @@
 \newtheorem{res}{Result}
 
 \setlength{\parindent}{0cm}
+\renewcommand{\baselinestretch}{1.5}
 
 \title{Bayesian Estimation of the Spectral Density}
 \author{Andee Kaplan \& Maggie Johnson}
@@ -25,28 +26,28 @@ load("../../tests.RData")
 @
 
 
-\section*{Motivation}
+\section{Motivation}
 <<problem, child='parts/motivation.Rnw', eval=TRUE>>=
 @
 
-\section*{Background and Problem Statement}
+\section{Background and Problem Statement}
 <<background, child='parts/background.Rnw', eval=TRUE>>=
 @
 
-\section*{Procedures}
+\section{Procedures}
 <<procedures, child='parts/procedures.Rnw', eval=TRUE>>=
 @
 
-\subsection*{Models}
+\subsection{Models}
 <<models, child='parts/models.Rnw', eval=TRUE>>=
 @
 
-\subsection*{Tests}
+\subsection{Tests}
 <<tests, child='parts/tests.Rnw', eval=TRUE>>=
 @
 
-\section*{Results}
-\section*{Discussion}
+\section{Results}
+\section{Discussion}
 
 \printbibliography
 

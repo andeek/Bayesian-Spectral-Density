@@ -1,4 +1,4 @@
-\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+\documentclass{article}\usepackage{graphicx, color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -11,16 +11,21 @@
 }
 \makeatother
 
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
 
 \usepackage{framed}
 \makeatletter
@@ -62,6 +67,7 @@
 \newtheorem{res}{Result}
 
 \setlength{\parindent}{0cm}
+\renewcommand{\baselinestretch}{1.5}
 
 \title{Bayesian Estimation of the Spectral Density}
 \author{Andee Kaplan \& Maggie Johnson}
@@ -74,24 +80,26 @@
 
 
 
-\section*{Motivation}
+\section{Motivation}
 
 To estimate the spectral density of a stationary time series using Bayesian methods using the asymptotic distributional properties of a periodogram. The motivation behind this work is the following model.
-
 \begin{align*}
 I_n(\omega_r) |f(\omega_r) &\stackrel{\cdot}{\sim}\text{ indep } \text{Exp}(2\pi f(\omega_r)) \\
 f(\omega_r) & \sim \pi(\theta)\\
 f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
 \end{align*}
+The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior holds. This research uses simulations to \textcolor{red}{validate} two results by Lahiri. \cite{lahiri2003necessary} \textcolor{red}{(add if do Bayes, unlikely)}
 
 
-\section*{Background and Problem Statement}
+\section{Background and Problem Statement}
 
 Two results drive the first part of our work.
 
 \begin{res} \label{res:first}
 Let $f(\omega_r) \not= 0, 1 \le r \le k$ where $f$ denotes the spectral density of a stationary time series $\{X_t\}$. Then when $n\rightarrow \infty$ the joint distribution of the periodogram at $\omega_r$, $I_n(\omega_r)$, tends to that of $k$ mutually indepependent random variables distributed as $\text{Exponential}(2\pi f(\omega_r))$ for $0<\omega_r<\pi$ \cite{brockwell2002introduction}.
 \end{res}
+
+Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies in place of fixed frequencies \textcolor{red}{reference this} $\{2\pi j/n : j=1,...,n\}$. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ (\textcolor{red}{(dig into reference to flesh this out)}. Lahiri \cite{lahiri2003necessary} derived two results that describe behavior required for Result~\ref{res:first} to hold for frequencies dependent upon $n$.
 
 \begin{res} \label{res:lahiri}
 In the absense of data tapering,
@@ -102,11 +110,19 @@ In the absense of data tapering,
 \end{enumerate}
 \end{res}
 
-Result~\ref{res:first} gives us the asymptotic distribution of a periodogram at fixed frequencies, while result~\ref{res:lahiri} details properties of frequencies that define where the independence holds. From these two results, we explore at what point distant from zero and at what spacings close to zero do the approximate independence and exponential distribution fail in the periodogram values. 
+%Result~\ref{res:first} gives us the asymptotic distribution of a periodogram at fixed frequencies, while result~\ref{res:lahiri} details properties of frequencies that define where the independence holds. 
+
+Result~\ref{res:lahiri} suggests that for a subset of sufficiently spaced and and distant from 0 Fourier frequencies, the periodogram ordinates at these frequencies should be asymptotically independent and exponentially distributed. \textcolor{red}{We explore these two results to determine if}, for \textcolor{red}{sufficiently} large $n$,
+\begin{enumerate}
+  \item Result~\ref{res:first} will not hold at the Fourier frequencies, and
+  \item if (1) is true, a subset of Fourier frequencies that are sufficiently spaced and far from 0 can be constructed such that Result~\ref{res:first} holds.
+\end{enumerate}
+
+%at at what point distant from zero and at what spacings close to zero do the approximate independence and exponential distribution fail in the periodogram values. 
 
 
 
-\section*{Procedures}
+\section{Procedures}
 
 We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
 
@@ -121,7 +137,7 @@ We implement the following testing procedure and repeat $s$ simulations of the t
 \end{enumerate}
 
 
-\subsection*{Models}
+\subsection{Models}
 
 We used three separate models to explore the asymptotic behavior of the periodogram. The included models are \begin{inparaenum}[\itshape a\upshape)]
 \item IID Gaussian(0, 1);
@@ -148,9 +164,12 @@ f_X(\omega) = \frac{\sigma^2}{2\pi} \frac{|\theta(e^{-i \omega}|^2}{|\phi(e^{-i 
 Without the exact knowledge of the spectral density function, we would not be able to test the distributions of the periodogram at each fequencies. 
 
 
-\subsection*{Tests}
-\section*{Results}
-\section*{Discussion}
+\subsection{Tests}
+
+
+
+\section{Results}
+\section{Discussion}
 
 \printbibliography
 
