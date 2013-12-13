@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx, hyperref, float, multicol, pdflscape, enumerate, paralist}
 \usepackage{amssymb,amsmath,amsthm} 
 \usepackage[backend=bibtex, natbib=true]{biblatex}
@@ -13,7 +13,7 @@
 \newtheorem{res}{Result}
 
 \setlength{\parindent}{0cm}
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.25}
 
 \title{Bayesian Estimation of the Spectral Density}
 \author{Andee Kaplan \& Maggie Johnson}
@@ -25,7 +25,6 @@
 load("../../tests.RData")
 @
 
-
 \section{Motivation}
 <<problem, child='parts/motivation.Rnw', eval=TRUE>>=
 @
@@ -34,12 +33,12 @@ load("../../tests.RData")
 <<background, child='parts/background.Rnw', eval=TRUE>>=
 @
 
-\section{Procedures}
-<<procedures, child='parts/procedures.Rnw', eval=TRUE>>=
+\section{Models}
+<<models, child='parts/models.Rnw', eval=TRUE>>=
 @
 
-\subsection{Models}
-<<models, child='parts/models.Rnw', eval=TRUE>>=
+\section{Procedures}
+<<procedures, child='parts/procedures.Rnw', eval=TRUE>>=
 @
 
 \subsection{Tests}
@@ -48,6 +47,8 @@ load("../../tests.RData")
 
 \section{Results}
 \section{Discussion}
+<<discussion, child='parts/discussion.Rnw', eval=TRUE>>=
+@
 
 \printbibliography
 

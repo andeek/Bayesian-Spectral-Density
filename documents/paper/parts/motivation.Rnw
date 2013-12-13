@@ -4,4 +4,4 @@ I_n(\omega_r) |f(\omega_r) &\stackrel{\cdot}{\sim}\text{ indep } \text{Exp}(2\pi
 f(\omega_r) & \sim \pi(\theta)\\
 f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
 \end{align*}
-The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior holds. This research uses simulations to \textcolor{red}{validate} two results by Lahiri. \cite{lahiri2003necessary} \textcolor{red}{(add if do Bayes, unlikely)}
+The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior holds. This research uses simulations to \mj{validate} two results by Lahiri. \cite{lahiri2003necessary} \mj{(add if do Bayes, unlikely)}
