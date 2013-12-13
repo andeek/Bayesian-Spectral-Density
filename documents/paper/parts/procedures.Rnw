@@ -1,3 +1,4 @@
+\mj{Explain two tests for independence and exponentials, pairwise tests even though not necessarily joint independence}
 We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
 
 \begin{enumerate}

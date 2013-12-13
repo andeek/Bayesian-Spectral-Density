@@ -1,4 +1,4 @@
-\documentclass{article}\usepackage{graphicx, color}
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -11,21 +11,16 @@
 }
 \makeatother
 
-\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
-\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
-\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
-\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
-\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
-\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
-\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
-\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
-\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
-\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
-\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
-\newcommand{\hlslot}[1]{\textit{#1}}%
-\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
 
 \usepackage{framed}
 \makeatletter
@@ -53,7 +48,7 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx, hyperref, float, multicol, pdflscape, enumerate, paralist}
 \usepackage{amssymb,amsmath,amsthm} 
 \usepackage[backend=bibtex, natbib=true]{biblatex}
@@ -67,7 +62,7 @@
 \newtheorem{res}{Result}
 
 \setlength{\parindent}{0cm}
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.25}
 
 \title{Bayesian Estimation of the Spectral Density}
 \author{Andee Kaplan \& Maggie Johnson}
@@ -79,7 +74,6 @@
 
 
 
-
 \section{Motivation}
 
 To estimate the spectral density of a stationary time series using Bayesian methods using the asymptotic distributional properties of a periodogram. The motivation behind this work is the following model.
@@ -88,7 +82,7 @@ I_n(\omega_r) |f(\omega_r) &\stackrel{\cdot}{\sim}\text{ indep } \text{Exp}(2\pi
 f(\omega_r) & \sim \pi(\theta)\\
 f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
 \end{align*}
-The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior holds. This research uses simulations to \textcolor{red}{validate} two results by Lahiri. \cite{lahiri2003necessary} \textcolor{red}{(add if do Bayes, unlikely)}
+The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior holds. This research uses simulations to \mj{validate} two results by Lahiri. \cite{lahiri2003necessary} \mj{(add if do Bayes, unlikely)}
 
 
 \section{Background and Problem Statement}
@@ -99,7 +93,7 @@ Two results drive the first part of our work.
 Let $f(\omega_r) \not= 0, 1 \le r \le k$ where $f$ denotes the spectral density of a stationary time series $\{X_t\}$. Then when $n\rightarrow \infty$ the joint distribution of the periodogram at $\omega_r$, $I_n(\omega_r)$, tends to that of $k$ mutually indepependent random variables distributed as $\text{Exponential}(2\pi f(\omega_r))$ for $0<\omega_r<\pi$ \cite{brockwell2002introduction}.
 \end{res}
 
-Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies in place of fixed frequencies \textcolor{red}{reference this} $\{2\pi j/n : j=1,...,n\}$. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ (\textcolor{red}{(dig into reference to flesh this out)}. Lahiri \cite{lahiri2003necessary} derived two results that describe behavior required for Result~\ref{res:first} to hold for frequencies dependent upon $n$.
+Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies in place of fixed frequencies \mj{reference this} $\{2\pi j/n : j=1,...,n\}$. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ \mj{(dig into reference to flesh this out)}. Lahiri \cite{lahiri2003necessary} derived two results that describe behavior required for a set of frequencies to satisfy Result~\ref{res:first}
 
 \begin{res} \label{res:lahiri}
 In the absense of data tapering,
@@ -112,7 +106,7 @@ In the absense of data tapering,
 
 %Result~\ref{res:first} gives us the asymptotic distribution of a periodogram at fixed frequencies, while result~\ref{res:lahiri} details properties of frequencies that define where the independence holds. 
 
-Result~\ref{res:lahiri} suggests that for a subset of sufficiently spaced and and distant from 0 Fourier frequencies, the periodogram ordinates at these frequencies should be asymptotically independent and exponentially distributed. \textcolor{red}{We explore these two results to determine if}, for \textcolor{red}{sufficiently} large $n$,
+Result~\ref{res:lahiri} suggests that for a subset of sufficiently spaced and and distant from 0 frequencies, the periodogram ordinates at these frequencies should be asymptotically independent. \mj{We explore these two results to determine if}, for large $n$,
 \begin{enumerate}
   \item Result~\ref{res:first} will not hold at the Fourier frequencies, and
   \item if (1) is true, a subset of Fourier frequencies that are sufficiently spaced and far from 0 can be constructed such that Result~\ref{res:first} holds.
@@ -122,27 +116,14 @@ Result~\ref{res:lahiri} suggests that for a subset of sufficiently spaced and an
 
 
 
-\section{Procedures}
+\section{Models}
 
-We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
-
-\begin{enumerate}
-\item Simulate $M$ draws from $X_1,\dots, X_n$ where $\{X_t\}$ is a stationary time series from one of three models.
-\item \label{perio}Obtain $M$ periodograms using the fourier frequencies from $(0, \pi)$, $\omega_j = \frac{2\pi j}{n}: j = 1, \dots, \lfloor n/2 \rfloor$.
-\item Obtain $\lfloor\frac{n-1}{2}\rfloor$ values of the spectral density at each fourier frequency $f(\omega_j)$. These will be known by design.
-\item Simulate $M$ draws from the $\lfloor\frac{n-1}{2}\rfloor$ different distributions $\text{Exp}(2\pi f(\omega_r))$
-\item \label{test:exp}Test the distribution of the $M$ values of periodograms at each fourier frequency separately. Store the number of failed tests at each frequency.
-\item \label{test:indep}Test the pairwise independence of each neighboring $M$ values of periodograms at each fourier frequency. Store the number of failed tests at each frequency.
-\item Inspect the results from steps~\ref{test:exp} and \ref{test:indep} to determine if different spacings of frequencies are needed. If so, use sparcer frequencies and repeat from step~\ref{perio} at the chosen frequencies rather than fourier frequencies.
-\end{enumerate}
-
-
-\subsection{Models}
+\mj{WHAT ARE WE DOING?!?!}
 
 We used three separate models to explore the asymptotic behavior of the periodogram. The included models are \begin{inparaenum}[\itshape a\upshape)]
 \item IID Gaussian(0, 1);
 \item AR(1) with $\phi = 0.5$; and
-\item AR(4) with $\boldsymbol{\phi} = [0.15, 0.05, 0.1, 0.5$].
+\item AR(4) with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45$].
 \end{inparaenum}
 
 \subsubsection*{IID Gaussian}
@@ -158,18 +139,63 @@ We use this model as a sanity check on our testing procedure. Should our procedu
 We used exclusively ARMA models as our experimental models because the spectral density of an ARMA model has a known and closed form. An ARMA model is a process $\{X_t\}$ with the form $\phi(B)X_t = \theta(B)Z_t$ where $B$ is the backshift operator and $\{Z_t\}$ is WN(0,$\sigma^2$). Models of this form have spectral density
 
 \begin{align*}
-f_X(\omega) = \frac{\sigma^2}{2\pi} \frac{|\theta(e^{-i \omega}|^2}{|\phi(e^{-i \omega}|^2}, \omega \in [-\pi, \pi] \text{\cite{brockwell2002introduction}}.
+f_X(\omega) = \frac{\sigma^2}{2\pi} \frac{|\theta(e^{-i \omega})|^2}{|\phi(e^{-i \omega})|^2}, \omega \in [-\pi, \pi] \text{\cite{brockwell2002introduction}}.
 \end{align*}
 
-Without the exact knowledge of the spectral density function, we would not be able to test the distributions of the periodogram at each fequencies. 
+Without the exact knowledge of the spectral density function, we would not be able to test the distributions of the periodogram at each fequencies. \mj{mention moving window?}
+
+
+\section{Procedures}
+
+\mj{Explain two tests for independence and exponentials, pairwise tests even though not necessarily joint independence}
+We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
+
+\begin{enumerate}
+\item Simulate $M$ draws from $X_1,\dots, X_n$ where $\{X_t\}$ is a stationary time series from one of three models.
+\item \label{perio}Obtain $M$ periodograms using the fourier frequencies from $(0, \pi)$, $\omega_j = \frac{2\pi j}{n}: j = 1, \dots, \lfloor n/2 \rfloor$.
+\item Obtain $\lfloor\frac{n-1}{2}\rfloor$ values of the spectral density at each fourier frequency $f(\omega_j)$. These will be known by design.
+\item Simulate $M$ draws from the $\lfloor\frac{n-1}{2}\rfloor$ different distributions $\text{Exp}(2\pi f(\omega_r))$
+\item \label{test:exp}Test the distribution of the $M$ values of periodograms at each fourier frequency separately. Store the number of failed tests at each frequency.
+\item \label{test:indep}Test the pairwise independence of each neighboring $M$ values of periodograms at each fourier frequency. Store the number of failed tests at each frequency.
+\item Inspect the results from steps~\ref{test:exp} and \ref{test:indep} to determine if different spacings of frequencies are needed. If so, use sparcer frequencies and repeat from step~\ref{perio} at the chosen frequencies rather than fourier frequencies.
+\end{enumerate}
 
 
 \subsection{Tests}
 
 
 
+\paragraph{Spearman's Rank Correlation}
+
+
+
+\paragraph{Kolmogorov-Smirnov Test of Distribution}
+
+
+
+
+
+
 \section{Results}
 \section{Discussion}
+
+
+\mj{
+\paragraph{Issues}
+\begin{enumerate}
+  \item Multiple comparison 
+  \item ARMA(4,2), MA(1), MA(2)
+  \item Exponential Fails
+  \item Usability 
+  \begin{itemize}
+    \item ARMA useless, Models w/more structure 
+    \item spacing depends on model
+    \item can never really be used in practice
+  \end{itemize}
+  \item Computation time
+  \item Pairwise independence $\neq$ Joint independence
+\end{enumerate}}
+
 
 \printbibliography
 

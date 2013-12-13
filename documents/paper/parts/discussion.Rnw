@@ -1,0 +1,16 @@
+
+\mj{
+\paragraph{Issues}
+\begin{enumerate}
+  \item Multiple comparison 
+  \item ARMA(4,2), MA(1), MA(2)
+  \item Exponential Fails
+  \item Usability 
+  \begin{itemize}
+    \item ARMA useless, Models w/more structure 
+    \item spacing depends on model
+    \item can never really be used in practice
+  \end{itemize}
+  \item Computation time
+  \item Pairwise independence $\neq$ Joint independence
+\end{enumerate}}
