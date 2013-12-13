@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.8)  13 DEC 2013 16:13
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.8)  13 DEC 2013 16:20
 entering extended mode
 **Kaplan_Johnson_Final_Project.tex
 
@@ -700,21 +700,21 @@ ntial($\OML/cmm/m/it/10 []$\OT1/cmr/m/it/10 )
 
 [2]
 Package color Info: Redefining color shadecolor on input line 186.
- <figure/inital-iid1.pdf, id=91, 361.35pt x 361.35pt>
+ <figure/inital-iid1.pdf, id=119, 361.35pt x 361.35pt>
 File: figure/inital-iid1.pdf Graphic file (type pdf)
 
 <use figure/inital-iid1.pdf>
 Package pdftex.def Info: figure/inital-iid1.pdf used on input line 188.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-iid2.pdf, id=92, 361.35pt x 361.35pt>
+<figure/inital-iid2.pdf, id=120, 361.35pt x 361.35pt>
 File: figure/inital-iid2.pdf Graphic file (type pdf)
 
 <use figure/inital-iid2.pdf>
 Package pdftex.def Info: figure/inital-iid2.pdf used on input line 189.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-iid3.pdf, id=93, 361.35pt x 361.35pt>
+<figure/inital-iid3.pdf, id=121, 361.35pt x 361.35pt>
 File: figure/inital-iid3.pdf Graphic file (type pdf)
 
 <use figure/inital-iid3.pdf>
@@ -722,14 +722,14 @@ Package pdftex.def Info: figure/inital-iid3.pdf used on input line 190.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 Package color Info: Redefining color shadecolor on input line 198.
 
-<figure/tests-iid1.pdf, id=94, 505.89pt x 361.35pt>
+<figure/tests-iid1.pdf, id=122, 505.89pt x 361.35pt>
 File: figure/tests-iid1.pdf Graphic file (type pdf)
 
 <use figure/tests-iid1.pdf>
 Package pdftex.def Info: figure/tests-iid1.pdf used on input line 200.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-iid2.pdf, id=95, 505.89pt x 361.35pt>
+<figure/tests-iid2.pdf, id=123, 505.89pt x 361.35pt>
 File: figure/tests-iid2.pdf Graphic file (type pdf)
 
 <use figure/tests-iid2.pdf>
@@ -747,21 +747,21 @@ ensity/documents/paper/figure/inital-iid2.pdf> <C:/Users/Andee/Documents/GitHub
 /Bayesian-Spectral-Density/documents/paper/figure/inital-iid3.pdf>]
 Package color Info: Redefining color shadecolor on input line 210.
 
-<figure/inital-ar11.pdf, id=125, 361.35pt x 361.35pt>
+<figure/inital-ar11.pdf, id=152, 361.35pt x 361.35pt>
 File: figure/inital-ar11.pdf Graphic file (type pdf)
 
 <use figure/inital-ar11.pdf>
 Package pdftex.def Info: figure/inital-ar11.pdf used on input line 212.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ar12.pdf, id=126, 361.35pt x 361.35pt>
+<figure/inital-ar12.pdf, id=153, 361.35pt x 361.35pt>
 File: figure/inital-ar12.pdf Graphic file (type pdf)
 
 <use figure/inital-ar12.pdf>
 Package pdftex.def Info: figure/inital-ar12.pdf used on input line 213.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ar13.pdf, id=127, 361.35pt x 361.35pt>
+<figure/inital-ar13.pdf, id=154, 361.35pt x 361.35pt>
 File: figure/inital-ar13.pdf Graphic file (type pdf)
 
 <use figure/inital-ar13.pdf>
@@ -769,78 +769,78 @@ Package pdftex.def Info: figure/inital-ar13.pdf used on input line 214.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 Package color Info: Redefining color shadecolor on input line 222.
 
-<figure/tests-ar11.pdf, id=128, 505.89pt x 361.35pt>
+<figure/tests-ar11.pdf, id=155, 505.89pt x 361.35pt>
 File: figure/tests-ar11.pdf Graphic file (type pdf)
 
 <use figure/tests-ar11.pdf>
 Package pdftex.def Info: figure/tests-ar11.pdf used on input line 224.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-ar12.pdf, id=129, 505.89pt x 361.35pt>
+<figure/tests-ar12.pdf, id=156, 505.89pt x 361.35pt>
 File: figure/tests-ar12.pdf Graphic file (type pdf)
 
 <use figure/tests-ar12.pdf>
 Package pdftex.def Info: figure/tests-ar12.pdf used on input line 225.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.232 \subsection*{AR(4)}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.232 \subsection*{AR(4)}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.232 \subsection*{AR(4)}
-                          <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-De
-nsity/documents/paper/figure/tests-iid1.pdf> <C:/Users/Andee/Documents/GitHub/B
-ayesian-Spectral-Density/documents/paper/figure/tests-iid2.pdf> <C:/Users/Andee
-/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-ar11.
-pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper
-/figure/inital-ar12.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Den
-sity/documents/paper/figure/inital-ar13.pdf> <C:/Users/Andee/Documents/GitHub/B
-ayesian-Spectral-Density/documents/paper/figure/tests-ar11.pdf> <C:/Users/Andee
-/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ar12.p
-df>]
 Package color Info: Redefining color shadecolor on input line 234.
- <figure/inital-ar41.pdf, id=186, 361.35pt x 361.35pt>
+
+<figure/inital-ar41.pdf, id=157, 361.35pt x 361.35pt>
 File: figure/inital-ar41.pdf Graphic file (type pdf)
 
 <use figure/inital-ar41.pdf>
 Package pdftex.def Info: figure/inital-ar41.pdf used on input line 236.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ar42.pdf, id=187, 361.35pt x 361.35pt>
+<figure/inital-ar42.pdf, id=158, 361.35pt x 361.35pt>
 File: figure/inital-ar42.pdf Graphic file (type pdf)
 
 <use figure/inital-ar42.pdf>
 Package pdftex.def Info: figure/inital-ar42.pdf used on input line 237.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ar43.pdf, id=188, 361.35pt x 361.35pt>
+<figure/inital-ar43.pdf, id=159, 361.35pt x 361.35pt>
 File: figure/inital-ar43.pdf Graphic file (type pdf)
 
 <use figure/inital-ar43.pdf>
 Package pdftex.def Info: figure/inital-ar43.pdf used on input line 238.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.239 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.239 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.239 \end{figure}
+                   <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/d
+ocuments/paper/figure/tests-iid1.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian
+-Spectral-Density/documents/paper/figure/tests-iid2.pdf> <C:/Users/Andee/Docume
+nts/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-ar11.pdf> <C
+:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure
+/inital-ar12.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/do
+cuments/paper/figure/inital-ar13.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian
+-Spectral-Density/documents/paper/figure/tests-ar11.pdf> <C:/Users/Andee/Docume
+nts/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ar12.pdf>]
 Package color Info: Redefining color shadecolor on input line 246.
 
-<figure/tests-ar41.pdf, id=189, 505.89pt x 361.35pt>
+<figure/tests-ar41.pdf, id=215, 505.89pt x 361.35pt>
 File: figure/tests-ar41.pdf Graphic file (type pdf)
 
 <use figure/tests-ar41.pdf>
 Package pdftex.def Info: figure/tests-ar41.pdf used on input line 248.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-ar42.pdf, id=190, 505.89pt x 361.35pt>
+<figure/tests-ar42.pdf, id=216, 505.89pt x 361.35pt>
 File: figure/tests-ar42.pdf Graphic file (type pdf)
 
 <use figure/tests-ar42.pdf>
@@ -848,21 +848,21 @@ Package pdftex.def Info: figure/tests-ar42.pdf used on input line 249.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 Package color Info: Redefining color shadecolor on input line 258.
 
-<figure/inital-ma11.pdf, id=191, 361.35pt x 361.35pt>
+<figure/inital-ma11.pdf, id=217, 361.35pt x 361.35pt>
 File: figure/inital-ma11.pdf Graphic file (type pdf)
 
 <use figure/inital-ma11.pdf>
 Package pdftex.def Info: figure/inital-ma11.pdf used on input line 260.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ma12.pdf, id=192, 361.35pt x 361.35pt>
+<figure/inital-ma12.pdf, id=218, 361.35pt x 361.35pt>
 File: figure/inital-ma12.pdf Graphic file (type pdf)
 
 <use figure/inital-ma12.pdf>
 Package pdftex.def Info: figure/inital-ma12.pdf used on input line 261.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ma13.pdf, id=193, 361.35pt x 361.35pt>
+<figure/inital-ma13.pdf, id=219, 361.35pt x 361.35pt>
 File: figure/inital-ma13.pdf Graphic file (type pdf)
 
 <use figure/inital-ma13.pdf>
@@ -889,14 +889,14 @@ dee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ar4
 er/figure/tests-ar42.pdf>]
 Package color Info: Redefining color shadecolor on input line 270.
 
-<figure/tests-ma11.pdf, id=234, 505.89pt x 361.35pt>
+<figure/tests-ma11.pdf, id=258, 505.89pt x 361.35pt>
 File: figure/tests-ma11.pdf Graphic file (type pdf)
 
 <use figure/tests-ma11.pdf>
 Package pdftex.def Info: figure/tests-ma11.pdf used on input line 272.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-ma12.pdf, id=235, 505.89pt x 361.35pt>
+<figure/tests-ma12.pdf, id=259, 505.89pt x 361.35pt>
 File: figure/tests-ma12.pdf Graphic file (type pdf)
 
 <use figure/tests-ma12.pdf>
@@ -904,21 +904,21 @@ Package pdftex.def Info: figure/tests-ma12.pdf used on input line 273.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 Package color Info: Redefining color shadecolor on input line 282.
 
-<figure/inital-ma21.pdf, id=236, 361.35pt x 361.35pt>
+<figure/inital-ma21.pdf, id=260, 361.35pt x 361.35pt>
 File: figure/inital-ma21.pdf Graphic file (type pdf)
 
 <use figure/inital-ma21.pdf>
 Package pdftex.def Info: figure/inital-ma21.pdf used on input line 284.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ma22.pdf, id=237, 361.35pt x 361.35pt>
+<figure/inital-ma22.pdf, id=261, 361.35pt x 361.35pt>
 File: figure/inital-ma22.pdf Graphic file (type pdf)
 
 <use figure/inital-ma22.pdf>
 Package pdftex.def Info: figure/inital-ma22.pdf used on input line 285.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-ma23.pdf, id=238, 361.35pt x 361.35pt>
+<figure/inital-ma23.pdf, id=262, 361.35pt x 361.35pt>
 File: figure/inital-ma23.pdf Graphic file (type pdf)
 
 <use figure/inital-ma23.pdf>
@@ -945,14 +945,14 @@ dee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ma1
 er/figure/tests-ma12.pdf>]
 Package color Info: Redefining color shadecolor on input line 294.
 
-<figure/tests-ma21.pdf, id=278, 505.89pt x 361.35pt>
+<figure/tests-ma21.pdf, id=301, 505.89pt x 361.35pt>
 File: figure/tests-ma21.pdf Graphic file (type pdf)
 
 <use figure/tests-ma21.pdf>
 Package pdftex.def Info: figure/tests-ma21.pdf used on input line 296.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-ma22.pdf, id=279, 505.89pt x 361.35pt>
+<figure/tests-ma22.pdf, id=302, 505.89pt x 361.35pt>
 File: figure/tests-ma22.pdf Graphic file (type pdf)
 
 <use figure/tests-ma22.pdf>
@@ -960,21 +960,21 @@ Package pdftex.def Info: figure/tests-ma22.pdf used on input line 297.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 Package color Info: Redefining color shadecolor on input line 306.
 
-<figure/inital-arma411.pdf, id=280, 361.35pt x 361.35pt>
+<figure/inital-arma411.pdf, id=303, 361.35pt x 361.35pt>
 File: figure/inital-arma411.pdf Graphic file (type pdf)
 
 <use figure/inital-arma411.pdf>
 Package pdftex.def Info: figure/inital-arma411.pdf used on input line 308.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-arma412.pdf, id=281, 361.35pt x 361.35pt>
+<figure/inital-arma412.pdf, id=304, 361.35pt x 361.35pt>
 File: figure/inital-arma412.pdf Graphic file (type pdf)
 
 <use figure/inital-arma412.pdf>
 Package pdftex.def Info: figure/inital-arma412.pdf used on input line 309.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-arma413.pdf, id=282, 361.35pt x 361.35pt>
+<figure/inital-arma413.pdf, id=305, 361.35pt x 361.35pt>
 File: figure/inital-arma413.pdf Graphic file (type pdf)
 
 <use figure/inital-arma413.pdf>
@@ -1001,14 +1001,14 @@ dee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ma2
 er/figure/tests-ma22.pdf>]
 Package color Info: Redefining color shadecolor on input line 318.
 
-<figure/tests-arma411.pdf, id=323, 505.89pt x 361.35pt>
+<figure/tests-arma411.pdf, id=345, 505.89pt x 361.35pt>
 File: figure/tests-arma411.pdf Graphic file (type pdf)
 
 <use figure/tests-arma411.pdf>
 Package pdftex.def Info: figure/tests-arma411.pdf used on input line 320.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-arma412.pdf, id=324, 505.89pt x 361.35pt>
+<figure/tests-arma412.pdf, id=346, 505.89pt x 361.35pt>
 File: figure/tests-arma412.pdf Graphic file (type pdf)
 
 <use figure/tests-arma412.pdf>
@@ -1016,21 +1016,21 @@ Package pdftex.def Info: figure/tests-arma412.pdf used on input line 321.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 Package color Info: Redefining color shadecolor on input line 330.
 
-<figure/inital-arma421.pdf, id=325, 361.35pt x 361.35pt>
+<figure/inital-arma421.pdf, id=347, 361.35pt x 361.35pt>
 File: figure/inital-arma421.pdf Graphic file (type pdf)
 
 <use figure/inital-arma421.pdf>
 Package pdftex.def Info: figure/inital-arma421.pdf used on input line 332.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-arma422.pdf, id=326, 361.35pt x 361.35pt>
+<figure/inital-arma422.pdf, id=348, 361.35pt x 361.35pt>
 File: figure/inital-arma422.pdf Graphic file (type pdf)
 
 <use figure/inital-arma422.pdf>
 Package pdftex.def Info: figure/inital-arma422.pdf used on input line 333.
 (pdftex.def)             Requested size: 155.02pt x 155.01907pt.
 
-<figure/inital-arma423.pdf, id=327, 361.35pt x 361.35pt>
+<figure/inital-arma423.pdf, id=349, 361.35pt x 361.35pt>
 File: figure/inital-arma423.pdf Graphic file (type pdf)
 
 <use figure/inital-arma423.pdf>
@@ -1057,14 +1057,14 @@ tests-arma411.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/d
 ocuments/paper/figure/tests-arma412.pdf>]
 Package color Info: Redefining color shadecolor on input line 342.
 
-<figure/tests-arma421.pdf, id=367, 505.89pt x 361.35pt>
+<figure/tests-arma421.pdf, id=388, 505.89pt x 361.35pt>
 File: figure/tests-arma421.pdf Graphic file (type pdf)
 
 <use figure/tests-arma421.pdf>
 Package pdftex.def Info: figure/tests-arma421.pdf used on input line 344.
 (pdftex.def)             Requested size: 230.18253pt x 164.42001pt.
 
-<figure/tests-arma422.pdf, id=368, 505.89pt x 361.35pt>
+<figure/tests-arma422.pdf, id=389, 505.89pt x 361.35pt>
 File: figure/tests-arma422.pdf Graphic file (type pdf)
 
 <use figure/tests-arma422.pdf>
@@ -1107,15 +1107,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 375.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
 Package rerunfilecheck Info: File `Kaplan_Johnson_Final_Project.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: 8316759EEB90BACC6136E6A06F46DB75;346.
+(rerunfilecheck)             Checksum: B35C020A9A715F76FEEB6AAF4DD87B58;763.
 Package logreq Info: Writing requests to 'Kaplan_Johnson_Final_Project.run.xml'
 .
  ) 
 Here is how much of TeX's memory you used:
- 11805 strings out of 494045
- 185402 string characters out of 3145970
+ 11812 strings out of 494045
+ 185538 string characters out of 3145970
  380493 words of memory out of 3000000
- 14831 multiletter control sequences out of 15000+200000
+ 14838 multiletter control sequences out of 15000+200000
  14996 words of font info for 56 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  37i,10n,49p,863b,903s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1133,9 +1133,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on Kaplan_Johnson_Final_Project.pdf (10 pages, 430524 bytes).
+Output written on Kaplan_Johnson_Final_Project.pdf (10 pages, 432416 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
+ 501 PDF objects out of 1000 (max. 8388607)
  70 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 
