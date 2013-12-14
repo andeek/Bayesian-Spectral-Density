@@ -33,11 +33,12 @@ load("../../tests.RData")
 <<background, child='parts/background.Rnw', eval=TRUE>>=
 @
 
+
 \section{Models}
 <<models, child='parts/models.Rnw', eval=TRUE>>=
 @
 
-\section{Procedures}
+\section{Methods}
 <<procedures, child='parts/procedures.Rnw', eval=TRUE>>=
 @
 
