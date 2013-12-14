@@ -1,7 +1,10 @@
-To estimate the spectral density of a stationary time series using Bayesian methods using the asymptotic distributional properties of a periodogram. The motivation behind this work is the following model.
-\begin{align*}
+To explore whether it is reasonable to estimate the spectral density of a stationary time series using Bayesian methods. To do this, it is necessary to rely on the asymptotic distributional properties of periodogram ordinates. The motivation behind this work is the following model.
+\begin{align}
+\label{eq:eqn1}
 I_n(\omega_r) |f(\omega_r) &\stackrel{\cdot}{\sim}\text{ indep } \text{Exp}(2\pi f(\omega_r)) \\
+\label{eq:eqn2}
 f(\omega_r) & \sim \pi(\theta)\\
+\label{eq:eqn3}
 f(\omega_r) | I_n(\omega_r) &\propto 2\pi f(\omega_r) e^{-2\pi f(\omega_r) y} \pi(\theta)
-\end{align*}
-The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior holds. This research uses simulations to \mj{validate} two results by Lahiri. \cite{lahiri2003necessary} \mj{(add if do Bayes, unlikely)}
+\end{align}
+The periodogram values at $\omega_r$ are only asymptotically distributed as independent exponentials, so to construct the Bayesian model it is essential that the asymptotic behavior in Equation \ref{eq:eqn1} holds. This research uses simulations to assess two results by Lahiri, which state conditions necessary for periodogram ordinates to be asymptotically independent \cite{lahiri2003necessary}.
