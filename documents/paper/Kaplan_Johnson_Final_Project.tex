@@ -67,7 +67,7 @@
 \newtheorem{res}{Result}
 
 \setlength{\parindent}{0cm}
-\renewcommand{\baselinestretch}{1.25}
+\renewcommand{\baselinestretch}{1.5}
 
 \title{Bayesian Estimation of the Spectral Density}
 \author{Andee Kaplan \& Maggie Johnson}
@@ -133,12 +133,14 @@ Result~\ref{res:lahiri} lends to the idea that a subset of sufficiently spaced a
 
 \section{Models}
 
-\mj{WHAT ARE WE DOING?!?!}
-
-We used three separate models to explore the asymptotic behavior of the periodogram. The included models are \begin{inparaenum}[\itshape a\upshape)]
+To explore the asymptotic behavior of the periodogram at the Fourier frequencies, we used several time series models with known spectral densities. The included models are \begin{inparaenum}[\itshape a\upshape)]
 \item IID Gaussian(0, 1);
-\item AR(1) with $\phi = 0.5$; and
-\item AR(4) with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45$].
+\item AR(1) with $\phi = 0.5$; 
+\item AR(4) with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45$];
+\item MA(1) with $\theta = 0.7$;
+\item MA(2) with $\boldsymbol{\theta} = [0.7, 0.3$];
+\item ARMA(4,1) with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45$] and $\theta = 0.7$; and
+\item ARMA(4,2) with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45$] and $\boldsymbol{\theta} = [0.7, 0.3$].
 \end{inparaenum}
 
 \subsubsection*{IID Gaussian}
@@ -148,14 +150,13 @@ The following result about the IID Gaussian model gives us knowledge of the exac
 For $\{X_t\} \stackrel{\text{IID}}{\sim} \text{N}(0,\sigma^2)$, the periodogram values $\left\{ I_n(\omega_j): \omega_j \in \mathcal{F}_n, \omega_j \not\in \{0,\pi\} \right\}$ are IID Exponential($\sigma^2$) random variables \cite{brockwell2002introduction}.
 \end{res}
 
-We use this model as a sanity check on our testing procedure. Should our procedure show failure with the IID Gaussian model, then this is an indication of an issue with the procedure, rather than the frequency spacings.
+This model was used as an initial baseline check to support our testing procedure of independent exponentially distributed ordinates. If our procedure showed failure with the IID Gaussian white noise model, then this would be an indication of an issue with the procedure, rather than the frequency spacings. The spectral density of the IID Gaussian model is $f_x(\omega) = \sigma^2/2\pi, \omega \in [-\pi, \pi]$.
 
 \subsubsection*{ARMA(p,q)}
-We used exclusively ARMA models as our experimental models because the spectral density of an ARMA model has a known and closed form. An ARMA model is a process $\{X_t\}$ with the form $\phi(B)X_t = \theta(B)Z_t$ where $B$ is the backshift operator and $\{Z_t\}$ is WN(0,$\sigma^2$). Models of this form have spectral density
-
-\begin{align*}
+We exclusively used ARMA models as our experimental models because the spectral density of an ARMA model has a known and closed form. An ARMA model is a process $\{X_t\}$ with the form $\phi(B)X_t = \theta(B)Z_t$ where $B$ is the backshift operator and $\{Z_t\}$ is WN(0,$\sigma^2$). Models of this form have spectral density
+\begin{align}
 f_X(\omega) = \frac{\sigma^2}{2\pi} \frac{|\theta(e^{-i \omega})|^2}{|\phi(e^{-i \omega})|^2}, \omega \in [-\pi, \pi] \text{\cite{brockwell2002introduction}}.
-\end{align*}
+\end{align}
 
 Without the exact knowledge of the spectral density function, we would not be able to test the distributions of the periodogram at each fequencies. \mj{mention moving window?}
 

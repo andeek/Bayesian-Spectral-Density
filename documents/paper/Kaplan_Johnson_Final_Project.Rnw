@@ -13,7 +13,7 @@
 \newtheorem{res}{Result}
 
 \setlength{\parindent}{0cm}
-\renewcommand{\baselinestretch}{1.25}
+\renewcommand{\baselinestretch}{1.5}
 
 \title{Bayesian Estimation of the Spectral Density}
 \author{Andee Kaplan \& Maggie Johnson}
