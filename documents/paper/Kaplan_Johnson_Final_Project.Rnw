@@ -45,6 +45,11 @@ load("../../tests.RData")
 <<tests, child='parts/tests.Rnw', eval=TRUE>>=
 @
 
+\subsection{Implementation}
+<<tests, child='parts/implementation.Rnw', eval=TRUE>>=
+@
+
+
 \section{Results}
 <<results, child='parts/results.Rnw', eval=TRUE>>=
 @

@@ -1,5 +1,4 @@
-\mj{Explain two tests for independence and exponentials, pairwise tests even though not necessarily joint independence}
-We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
+For Result\ref{res:first} to hold for a known spectral density at the full Fourier frequencies, or a subset of Fourier frequencies $\boldsymbol{\omega}$, the joint asymptotic distribution of the periodogram ordinates $I_n(\omega)$ must be equivalent to the product of n independent exponential distributions with means equal to $2\pi f(\omega)$. It is difficult to test the distribution of the full asymptotic joint distribution, so we split the problem in to two parts: one, a test of asymptotic exponential distribution at each $\omega_i$, and two, a method to test independence over $\omega$. Independence is tested pairwise across all frequencies of interest. We implement the following testing procedure and repeat $s$ simulations of the tests to determine if the tests reject exponentiality and indepence at similar rates as the Type-I errors of our tests ($\alpha$).
 
 \begin{enumerate}
 \item Simulate $M$ draws from $X_1,\dots, X_n$ where $\{X_t\}$ is a stationary time series from one of three models.

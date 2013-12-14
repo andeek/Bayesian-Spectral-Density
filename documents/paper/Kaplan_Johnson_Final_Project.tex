@@ -163,8 +163,7 @@ Without the exact knowledge of the spectral density function, we would not be ab
 
 \section{Procedures}
 
-\mj{Explain two tests for independence and exponentials, pairwise tests even though not necessarily joint independence}
-We implement the following testing procedure and repeat $s$ simulations of the tests to determine if we see similar rates of failures as the Type-I errors of our tests ($\alpha$).
+For Result\ref{res:first} to hold for a known spectral density at the full Fourier frequencies, or a subset of Fourier frequencies $\boldsymbol{\omega}$, the joint asymptotic distribution of the periodogram ordinates $I_n(\omega)$ must be equivalent to the product of n independent exponential distributions with means equal to $2\pi f(\omega)$. It is difficult to test the distribution of the full asymptotic joint distribution, so we split the problem in to two parts: one, a test of asymptotic exponential distribution at each $\omega_i$, and two, a method to test independence over $\omega$. Independence is tested pairwise across all frequencies of interest. We implement the following testing procedure and repeat $s$ simulations of the tests to determine if the tests reject exponentiality and indepence at similar rates as the Type-I errors of our tests ($\alpha$).
 
 \begin{enumerate}
 \item Simulate $M$ draws from $X_1,\dots, X_n$ where $\{X_t\}$ is a stationary time series from one of three models.
@@ -191,6 +190,11 @@ We used a two-sided Spearman's rank correlation test at the $\alpha = 0.05$-leve
 The Kolmogorov-Smirnov (KS) test is a procedure that uses the maximum vertical distance between an empirical cumulative distribution function and a named cumulative distribution function as a measure of how much the two functions resemble each other. The only assumption of this test is that the data are a random sample. The KS test uses test statistic $T = \sup\limits_x |F^*(x) - S(x)|$ to test the null hypothesis $H_0: F(x) = F^*(x)$ for all $x$, where $F^*(x)$ is the completely specified hypothesized distribution function, $F(x)$ is the unknown distribution function of the data, and $S(x)$ is the empirical distribution function of the data. For data of length $n \le 100$, an exact p-values are available and for data of length $n > 100$, an asymptotic approximation is used \cite{conover1998practical}. The asymptotic distribution is called the Kolmogorov distribution, and is of the form $P(T \le \lambda) = \sum_{k=-\infty}^\infty (-1)^k e^{-2k^2 \lambda^2}$ \cite{kolmogorov1992empirical}.
 
 We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the distributions of our periodogram values at each frequency $\omega_j$ were exponentially distributed with mean parameter $2\pi f(\omega_j)$, where $f(\omega_j)$ is the spectral density evaluated at $\omega_j$.
+
+
+
+
+\subsection{Implementation}
 
 
 
