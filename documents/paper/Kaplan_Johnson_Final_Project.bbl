@@ -39,6 +39,44 @@
   \field{year}{2002}
 \endentry
 
+\entry{conover1998practical}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Conover}{C.}%
+     {William~Jay}{W.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {$\{$John Wiley \& Sons$\}$}%
+  }
+  \strng{namehash}{CWJ1}
+  \strng{fullhash}{CWJ1}
+  \field{sortinit}{C}
+  \field{title}{Practical nonparametric statistics}
+  \field{year}{1998}
+\endentry
+
+\entry{kolmogorov1992empirical}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kolmogorov}{K.}%
+     {A}{A}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \strng{namehash}{KA1}
+  \strng{fullhash}{KA1}
+  \field{sortinit}{K}
+  \field{booktitle}{Breakthroughs in statistics}
+  \field{pages}{106\bibrangedash 113}
+  \field{title}{On the empirical determination of a distribution function}
+  \field{year}{1992}
+\endentry
+
 \entry{lahiri2003necessary}{article}{}
   \name{author}{1}{}{%
     {{}%
