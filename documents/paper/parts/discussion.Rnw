@@ -6,12 +6,10 @@ In this paper we have focused largely on the assumption of asymptotic independen
 
 
 \mj{
-\paragraph{Issues}
-\begin{enumerate}
-  \item Usability 
+Usability 
   \begin{itemize}
     \item ARMA useless, Models w/more structure 
     \item spacing depends on model
     \item can never really be used in practice
   \end{itemize}
-\end{enumerate}}
+}
