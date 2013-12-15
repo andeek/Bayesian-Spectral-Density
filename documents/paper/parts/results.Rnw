@@ -66,7 +66,7 @@ g_perio.ma1
 g_spec.ma1
 @
 
-The tests of independence seem to give relatively similar rejection rates to $\alpha$, (Figure~\ref{fig:tests-ma1}) indicating no serious departure from pairwise independence at the neighboring Fourier frequencies. The Kolmogorov-Smirnov test gives reasonable rejection rates except for frequencies nearing $\pi$. This is the opposite of what was seen with the AR(4) model, and as sparcifying the Fourier frequencies would not change whether the periodogram ordinates at these frequencies are exponentially distributed. This model would only result in asymptotically independent exponentially distributed periodogram ordinates if the Fourier frequencies nearing $\pi$ were excluded. As these frequencies do not appear to be as important in the periodogram in Figure~\ref{fig:initial-ma1}, it could be reasonable to proceed with a subset of frequencies to use in Bayesian modeling of the spectral density. 
+The tests of independence seem to give relatively similar rejection rates to $\alpha$, (Figure~\ref{fig:tests-ma1}) indicating no serious departure from pairwise independence at the neighboring Fourier frequencies. The Kolmogorov-Smirnov test gives reasonable rejection rates except for frequencies nearing $\pi$. This is the opposite of what was seen with the AR(4) model, and as sparcifying the Fourier frequencies would not change whether the periodogram ordinates at these frequencies are exponentially distributed. This model would only result in asymptotically independent exponentially distributed periodogram ordinates if the Fourier frequencies nearing $\pi$ were excluded. As these frequencies do not appear to be as important in the periodogram in Figure~\ref{fig:inital-ma1}, it could be reasonable to proceed with a subset of frequencies to use in Bayesian modeling of the spectral density. 
 
 <<tests-ma1, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an MA(1) model.', fig.pos='H'>>=
 g_ind.ma1
@@ -86,11 +86,14 @@ g_exp.ma1
 % @
 % 
 \subsubsection{ARMA(4,1)}
+Lastly, we considered an ARMA model with both autoregressive and moving average components. Specifically, the AR and MA coefficients were equal to that of the AR(4) and MA(1) models discussed previously.  
 <<inital-arma41, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an ARMA(4,1) model.', fig.pos='H'>>=
 g_draws.arma41
 g_perio.arma41
 g_spec.arma41
 @
+
+This ARMA model fails the pairwise independence tests at frequencies close to 0, similarily to the AR(4) model. An attempt at sparcifying frequencies close to 0 could be made to satisfy the independence conditions of Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is violated at the majority of the Fourier frequencies, Figure~\ref{fig:tests-arma41}. \mj{Similar results from the AR(4) at frequencies near to 0, and failures at frequences near to $\pi$ from the the MA(1) model appear to result in asymptotic exponential distributional properties only at frequencies surround $\pi/2$}. 
 
 <<tests-arma41, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an ARMA(4,1) model.', fig.pos='H'>>=
 g_ind.arma41
