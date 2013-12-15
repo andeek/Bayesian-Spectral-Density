@@ -112,7 +112,7 @@ g_exp.arma41
 % g_exp.arma42
 % @
 
-\subsection{Sparcify Frequencies for AR(4)} \label{sec:sparce}
+\subsection{Sparce Frequencies for AR(4)} \label{sec:sparce}
 Lahiri's result~\ref{res:lahiri} suggests that, for sparce frequencies and frequencies distant from 0, asymptotic dependence should hold. We attempted to apply this to the AR(4) model to see if we could find a subset where pairwise independence would hold at all frequencies. We looked at all possible evenly spaced subsets of frequencies from $2\pi/500$ to $2\pi 60/500$, For example, removing every other frequency would result in two possible subsets, one beginning at $2\pi/500$, the other at $2\pi/250$. Examples of every other frequency and every third frequency subsets and the rejection rates for pairwise tests of independence are shown in Figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4}.
 
 <<space1-ar4, echo=FALSE, message=FALSE, warning=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of pairwise independence for every other Fourier frequency starting at the first and second Fourier frequencies, respectively.', fig.pos='H'>>=

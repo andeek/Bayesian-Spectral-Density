@@ -95,20 +95,20 @@ The periodogram values at $\omega_r$ are only asymptotically distributed as inde
 
 \section{Background and Problem Statement}
 
-Spectral analysis, or ``frequency domain analysis" is the analysis of stationary time series $\{X_t\}$ by decomposing $\{X_t\}$ into sinusoidal componenets. Spectral analysis is equivalent to ``time domain" analysis based on the autocovariance function, but \mj{can be more useful in certain situations}. The spectral density of a mean-zero stationary process $\{X_t\}$ is used to describe the frequency decomposition of the autocovariance function $\gamma(\cdot)$ and the process $\{X_t\}$. It is the function $f(\cdot)$ defined by 
+Spectral analysis, or ``frequency domain analysis" is the analysis of stationary time series $\{X_t\}$ using the decomposition $\{X_t\}$ into sinusoidal componenets. Spectral analysis is equivalent to ``time domain" analysis based on the autocovariance function, but can be more useful in applications where sinusoidal behavior is relevant. The spectral density of a mean-zero stationary process $\{X_t\}$ is used to describe the frequency decomposition of the autocovariance function $\gamma(\cdot)$ and the process $\{X_t\}$ \cite{brockwell2002introduction}. It is the function $f(\cdot)$ defined by 
 \begin{align}
-f(\lambda) = \frac{1}{2\pi} \sum_{h=-\infty}^{\infty} e^{-ih\lambda} \gamma(h), \hspace{.5cm} -\infty < \lambda < \infty
+f(\omega) = \frac{1}{2\pi} \sum_{h=-\infty}^{\infty} e^{-ih\omega} \gamma(h), \hspace{.5cm} -\infty < \omega < \infty
 \end{align}
-where $e^{i\lambda}=cos(\lambda)+isin(\lambda)$ and $i=sqrt(-1)$ \cite{brockwell2002introduction}. The periodogram, $I_n(\cdot)$ of $\{X_t\}$ can be regarded as a \mj{sample analogue} of $2\pi f(\cdot)$ \cite{brockwell2002introduction}. The periodogram of $\{x_1,...,x_n\}$ is the function
+where $e^{i\omega}=cos(\omega)+isin(\omega)$ and $i=sqrt(-1)$ \cite{brockwell2002introduction}. The periodogram, $I_n(\cdot)$ of $\{X_t\}$ can be regarded as a \mj{sample analogue} of $2\pi f(\cdot)$ \cite{brockwell2002introduction}. The periodogram of $\{x_1,...,x_n\}$ at a frequencey $\omega$ is the function
 \begin{align}
-I_n(\lambda) = \frac{1}{n} \left\lvert \sum_{t=1}^n x_t e^{-it\lambda} \right\rvert^2
+I_n(\omega) = \frac{1}{n} \left\lvert \sum_{t=1}^n x_t e^{-it\omega} \right\rvert^2
 \end{align}
 
 \begin{res} \label{res:first}
 Let $f(\omega_r) \not= 0, 1 \le r \le k$ where $f$ denotes the spectral density of a stationary time series $\{X_t\}$. Then when $n\rightarrow \infty$ the joint distribution of the periodogram at $\omega_r$, $I_n(\omega_r)$, tends to that of $k$ mutually indepependent random variables distributed as $\text{Exponential}(2\pi f(\omega_r))$ for $0<\omega_r<\pi$ \cite{brockwell2002introduction}. 
 \end{res}
 
-Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies in place of fixed frequencies \mj{reference this} $\{2\pi j/n : j=1,...,n\}$. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ \mj{(dig into reference to flesh this out)}. Lahiri \cite{lahiri2003necessary} derived two results that describe behavior required for a set of frequencies to satisfy Result~\ref{res:first}
+Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies, $\{\omega_j = 2\pi j/n : j=1,...,n\}$, in a fixed time period. \mj{\cite{brockwell2002introduction}}. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ \mj{(dig into reference to flesh this out)}. Lahiri \cite{lahiri2003necessary} derived two results that describe behavior required for a set of frequencies to satisfy the asymptotic independence assumption in Result~\ref{res:first}
 
 \begin{res} \label{res:lahiri}
 In the absense of data tapering,
@@ -121,10 +121,10 @@ In the absense of data tapering,
 
 %Result~\ref{res:first} gives us the asymptotic distribution of a periodogram at fixed frequencies, while result~\ref{res:lahiri} details properties of frequencies that define where the independence holds. 
 
-Result~\ref{res:lahiri} lends to the idea that a subset of sufficiently spaced and and distant from 0 \texttt{Fourier} frequencies can be constructed such that the periodogram ordinates at these frequencies should be asymptotically independent. \mj{We explore these two results to determine if}, for large $n$,
+Results~\ref{res:first} and ~\ref{res:lahiri} lend to the question: ``Can a subset of sufficiently spaced and and distant from 0 \textit{Fourier} frequencies be constructed such that the periodogram ordinates at these frequencies are asymptotically independent and exponentially distributed?" We explore these two results to determine if, for large $n$,
 \begin{enumerate}
-  \item Result~\ref{res:first} will not hold at the Fourier frequencies, and
-  \item if (1) is true, a subset of Fourier frequencies that are sufficiently spaced and far from 0 can be constructed such that Result~\ref{res:first} holds.
+  \item Result~\ref{res:first} will not, in fact, hold at the Fourier frequencies, and
+  \item if (1) is true, a \mj{usable} subset of Fourier frequencies can be constructed such that Result~\ref{res:first} holds.
 \end{enumerate}
 
 %at at what point distant from zero and at what spacings close to zero do the approximate independence and exponential distribution fail in the periodogram values. 
@@ -370,7 +370,7 @@ This ARMA model fails the pairwise independence tests at frequencies close to 0,
 % g_exp.arma42
 % @
 
-\subsection{Sparcify Frequencies for AR(4)} \label{sec:sparce}
+\subsection{Sparce Frequencies for AR(4)} \label{sec:sparce}
 Lahiri's result~\ref{res:lahiri} suggests that, for sparce frequencies and frequencies distant from 0, asymptotic dependence should hold. We attempted to apply this to the AR(4) model to see if we could find a subset where pairwise independence would hold at all frequencies. We looked at all possible evenly spaced subsets of frequencies from $2\pi/500$ to $2\pi 60/500$, For example, removing every other frequency would result in two possible subsets, one beginning at $2\pi/500$, the other at $2\pi/250$. Examples of every other frequency and every third frequency subsets and the rejection rates for pairwise tests of independence are shown in Figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4}.
 
 \begin{knitrout}
@@ -401,21 +401,22 @@ Ultimately, considering all subsets of frequencies from $2\pi/500$ to $2\pi 60/5
 
 \section{Discussion}
 
+This researched focused on assessing asymptotic independence and exponential distributional assumptions of periodograms at the Fourier frequencies. In models where asymptotic pairwise independence did not hold at all of the frequencies, we explored it was possible to construct a subset of frequencies where asymptotic independence was satisfied, Result~\ref{res:lahiri}. In all of the AMRA models we considered, including those discussed, we were either unable to find a lack of pairwise independence at the full Fourier frequencies, or if independence wasn't satisfied, we were unable to find a suitable subset of frequencies such that Result~\ref{res:lahiri} held without removing a large number of important frequencies. For example, in the AR(4) example, pairwise asymptotic independence was satisfied for a subset of frequencies if those near 0 were removed. This was a large number of frequencies, roughly $\{2\pi 1/500,...,2\pi 60/500\}$ and happened to be the only frequencies that appeared important in the estimated periodograms. Therefore, this subset of frequencies would be relatively useless if anyone wanted to proceed with further practical analysis.
+
+It should be noted that if a set of random variables are all pairwise independent, this does not imply they are jointly independent. In our tests of asymptotic independence, it is possible that in models where we found an indication of pairwise asymptotic independence, a higher order dependent structure was still present. The use of pairwise independence tests also presented a multiple comparison issue which we have not accounted for here. To test all possible pairs of Fourier frequencies, $\sum_{i=1}^k (k-1)$ pairwise tests are required where $k=\lfloor\frac{n-1}{2}\rfloor$. A familywise error rate correction such as Bonferroni may be too conservative in this application, so other multiple comparison corrections should be considered if pairwise independence is to be used to assess asymptotic independence of the periodogram.
+
+In this paper we have focused largely on the assumption of asymptotic independence and the Results by Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is equally as important if we wanted to attempt to implement a Bayesian analysis of the spectral density. If our tests of distribution failed at one or more frequencies, the subset of Fourier frequencies that could produce asymptotically independent exponential periodogram ordinates could not include these frequencies. In models such as the MA(2) and ARMA(4,1) we considered, this was a very large number of frequencies and therefore, using the Fourier frequencies for these specific models in a Bayesian analysis would be relatively useless. 
+
 
 \mj{
 \paragraph{Issues}
 \begin{enumerate}
-  \item Multiple comparison 
-  \item ARMA(4,2), MA(1), MA(2)
-  \item Exponential Fails
   \item Usability 
   \begin{itemize}
     \item ARMA useless, Models w/more structure 
     \item spacing depends on model
     \item can never really be used in practice
   \end{itemize}
-  \item Computation time
-  \item Pairwise independence $\neq$ Joint independence
 \end{enumerate}}
 
 

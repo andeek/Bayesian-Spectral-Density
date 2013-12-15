@@ -1,16 +1,17 @@
+This researched focused on assessing asymptotic independence and exponential distributional assumptions of periodograms at the Fourier frequencies. In models where asymptotic pairwise independence did not hold at all of the frequencies, we explored it was possible to construct a subset of frequencies where asymptotic independence was satisfied, Result~\ref{res:lahiri}. In all of the AMRA models we considered, including those discussed, we were either unable to find a lack of pairwise independence at the full Fourier frequencies, or if independence wasn't satisfied, we were unable to find a suitable subset of frequencies such that Result~\ref{res:lahiri} held without removing a large number of important frequencies. For example, in the AR(4) example, pairwise asymptotic independence was satisfied for a subset of frequencies if those near 0 were removed. This was a large number of frequencies, roughly $\{2\pi 1/500,...,2\pi 60/500\}$ and happened to be the only frequencies that appeared important in the estimated periodograms. Therefore, this subset of frequencies would be relatively useless if anyone wanted to proceed with further practical analysis.
+
+It should be noted that if a set of random variables are all pairwise independent, this does not imply they are jointly independent. In our tests of asymptotic independence, it is possible that in models where we found an indication of pairwise asymptotic independence, a higher order dependent structure was still present. The use of pairwise independence tests also presented a multiple comparison issue which we have not accounted for here. To test all possible pairs of Fourier frequencies, $\sum_{i=1}^k (k-1)$ pairwise tests are required where $k=\lfloor\frac{n-1}{2}\rfloor$. A familywise error rate correction such as Bonferroni may be too conservative in this application, so other multiple comparison corrections should be considered if pairwise independence is to be used to assess asymptotic independence of the periodogram.
+
+In this paper we have focused largely on the assumption of asymptotic independence and the Results by Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is equally as important if we wanted to attempt to implement a Bayesian analysis of the spectral density. If our tests of distribution failed at one or more frequencies, the subset of Fourier frequencies that could produce asymptotically independent exponential periodogram ordinates could not include these frequencies. In models such as the MA(2) and ARMA(4,1) we considered, this was a very large number of frequencies and therefore, using the Fourier frequencies for these specific models in a Bayesian analysis would be relatively useless. 
+
 
 \mj{
 \paragraph{Issues}
 \begin{enumerate}
-  \item Multiple comparison 
-  \item ARMA(4,2), MA(1), MA(2)
-  \item Exponential Fails
   \item Usability 
   \begin{itemize}
     \item ARMA useless, Models w/more structure 
     \item spacing depends on model
     \item can never really be used in practice
   \end{itemize}
-  \item Computation time
-  \item Pairwise independence $\neq$ Joint independence
 \end{enumerate}}
