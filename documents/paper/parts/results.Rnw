@@ -47,7 +47,7 @@ g_perio.ar4
 g_spec.ar4
 @
 
-Unlike the IID Gaussian and AR(1) models, this AR(4) model does not have rejection rates all close to $\alpha$ for the independence and exponential tests at neighboring Fourier frequencies. At frequencies closer to 0, the pairwise independence tests fail at rates consistently higher than $\alpha$ and likewise, especially for frequencies less than 1, the periodogram ordinates should not be considered to be asymptotically exponentially distributed. Sparcifying the Fourier frequencies closer to 0 will not change that the periodograms at these frequencies are asymptotically exponential. However, we explore if sparcifying the frequencies closer to 0 will satisfy Result~\ref{res:lahiri} in Section~\ref{sec:sparce}.
+Unlike the IID Gaussian and AR(1) models, this AR(4) model does not have rejection rates all close to $\alpha$ for the independence and exponential tests at neighboring Fourier frequencies. At frequencies closer to 0, the pairwise independence tests fail at rates consistently higher than $\alpha$ and likewise, especially for frequencies less than 1, the periodogram ordinates should not be considered to be asymptotically exponentially distributed, see Figure~\ref{fig:tests-ar4}. Sparcifying the Fourier frequencies closer to 0 will not change that the periodograms at these frequencies are asymptotically exponential. However, we explore if sparcifying the frequencies closer to 0 will satisfy Result~\ref{res:lahiri} in Section~\ref{sec:sparce}.
 
 <<tests-ar4, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an AR(4) model.', fig.pos='H'>>=
 g_ind.ar4
@@ -55,11 +55,18 @@ g_exp.ar4
 @
 
 \subsubsection{MA(1)}
+We also experimented with a MA(1) model with $\theta = 0.3$ where a timeseries with this behavior has the form 
+\begin{align}
+x_t = \epsilon_t - \theta \epsilon_{t-1}
+\end{align}
+where $\epsilon_t \sim WN(0,\sigma^2)$. Figure~\ref{fig:inital-ma1} shows that the estimated periodogram for a simulated timeseries of this form puts more importance on frequencies closer to 0 than to $\pi$, as in the AR(1) model, but shows a more random structure than the AR(1).
 <<inital-ma1, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an MA(1) model.', fig.pos='H'>>=
 g_draws.ma1
 g_perio.ma1
 g_spec.ma1
 @
+
+The tests of independence seem to give relatively similar rejection rates to $\alpha$, (Figure~\ref{fig:tests-ma1}) indicating no serious departure from pairwise independence at the neighboring Fourier frequencies. The Kolmogorov-Smirnov test gives reasonable rejection rates except for frequencies nearing $\pi$. This is the opposite of what was seen with the AR(4) model, and as sparcifying the Fourier frequencies would not change whether the periodogram ordinates at these frequencies are exponentially distributed. This model would only result in asymptotically independent exponentially distributed periodogram ordinates if the Fourier frequencies nearing $\pi$ were excluded. As these frequencies do not appear to be as important in the periodogram in Figure~\ref{fig:initial-ma1}, it could be reasonable to proceed with a subset of frequencies to use in Bayesian modeling of the spectral density. 
 
 <<tests-ma1, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an MA(1) model.', fig.pos='H'>>=
 g_ind.ma1
