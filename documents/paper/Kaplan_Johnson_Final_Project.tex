@@ -371,6 +371,32 @@ This ARMA model fails the pairwise independence tests at frequencies close to 0,
 % @
 
 \subsection{Sparcify Frequencies for AR(4)} \label{sec:sparce}
+Lahiri's result~\ref{res:lahiri} suggests that, for sparce frequencies and frequencies distant from 0, asymptotic dependence should hold. We attempted to apply this to the AR(4) model to see if we could find a subset where pairwise independence would hold at all frequencies. We looked at all possible evenly spaced subsets of frequencies from $2\pi/500$ to $2\pi 60/500$, For example, removing every other frequency would result in two possible subsets, one beginning at $2\pi/500$, the other at $2\pi/250$. Examples of every other frequency and every third frequency subsets and the rejection rates for pairwise tests of independence are shown in Figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+\includegraphics[width=.49\textwidth]{figure/space1-ar41} 
+\includegraphics[width=.49\textwidth]{figure/space1-ar42} \caption[Tests of pairwise independence for every other Fourier frequency starting at the first and second Fourier frequencies, respectively]{Tests of pairwise independence for every other Fourier frequency starting at the first and second Fourier frequencies, respectively.\label{fig:space1-ar4}}
+\end{figure}
+
+
+\end{knitrout}
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+\includegraphics[width=.33\textwidth]{figure/space2-ar41} 
+\includegraphics[width=.33\textwidth]{figure/space2-ar42} 
+\includegraphics[width=.33\textwidth]{figure/space2-ar43} \caption[Tests of pairwise independence for every third Fourier frequency starting at the first, second and third Fourier frequencies, respectively]{Tests of pairwise independence for every third Fourier frequency starting at the first, second and third Fourier frequencies, respectively.\label{fig:space2-ar4}}
+\end{figure}
+
+
+\end{knitrout}
+
+
+Ultimately, considering all subsets of frequencies from $2\pi/500$ to $2\pi 60/500$, the pairwise independence result will not hold for frequencies less than $2\pi 25/500$, see Appendix ?. This could indicate that frequencies greater than $2 \pi 25/500$ are sufficiently ``distant from 0," satisfying Result~\ref{res:lahiri}. \mj{more}
 
 
 \section{Discussion}
