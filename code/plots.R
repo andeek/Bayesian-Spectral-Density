@@ -47,11 +47,11 @@ g_ind.ar1 <- qplot((1:length(tests.ar1$prop_fails.ind))*2*pi/n, tests.ar1$prop_f
   xlab("Frequency") + ylab("Proportion of Fails") +
   ggtitle("Tests of Independence")
 
-g_draws.ar4 <- qplot(1:n, draws.ar4[,1], geom="line") +
+g_draws.ar4 <- qplot(1:n, draws.ar4[,2], geom="line") +
   xlab("Time") + ylab("Data") +
   ggtitle("One Series of Data")
 
-g_perio.ar4 <- qplot(freq, perio.ar4[,1], geom="line") +
+g_perio.ar4 <- qplot(freq, perio.ar4[,2], geom="line") +
   xlab("Frequency") + ylab(expression(I[n](omega))) +
   ggtitle("Periodogram")
 

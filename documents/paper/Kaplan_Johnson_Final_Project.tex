@@ -53,7 +53,7 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1.25in]{geometry}
 \usepackage{graphicx, hyperref, float, multicol, pdflscape, enumerate, paralist}
 \usepackage{amssymb,amsmath,amsthm} 
 \usepackage[backend=bibtex, natbib=true]{biblatex}
@@ -69,7 +69,7 @@
 \setlength{\parindent}{0cm}
 \renewcommand{\baselinestretch}{1.5}
 
-\title{Bayesian Estimation of the Spectral Density}
+\title{Independence of Periodogram Ordinates at the Fourier Frequencies}
 \author{Andee Kaplan \& Maggie Johnson}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
@@ -236,7 +236,7 @@ The first model considered to test the asymptotic assumptions in Results~\ref{re
 \begin{align}
 x_t = \phi x_{t-1} + \epsilon_t
 \end{align}
-where $\epsilon_t \sim WN(0, \sigma^2)$. 
+where $\epsilon_t \sim WN(0, \sigma^2)$. Figure~\ref{fig:inital-ar1} shows that the periodogram for this model shows more structure than that of the IID Gaussian with frequencies closer to 0 showing up as of higher importance than those further from 0. 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -249,6 +249,7 @@ where $\epsilon_t \sim WN(0, \sigma^2)$.
 \end{knitrout}
 
 
+The tests of exponential distributions and pairwise independence also gave rejection results consistent with the Type I error rate. Therefore, there was no indication that Result~\ref{res:first} does not hold at the Fourier frequencies for an AR(1) model with $\phi=0.5$. This was not entirely surprising as an AR(1) model has only slightly more structure than a white noise model as it represents dependence between neighboring time points only.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -261,6 +262,7 @@ where $\epsilon_t \sim WN(0, \sigma^2)$.
 
 
 \subsubsection{AR(4)}
+To experiment with a timeseries with a slightly more long-term structure, we implemented an AR(4) model with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45]$. The estimated periodogram, for simulated timeseries following this model, is dominated by frequencies very close to 0, Figure~\ref{fig:inital-ar4}. 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -272,6 +274,8 @@ where $\epsilon_t \sim WN(0, \sigma^2)$.
 
 \end{knitrout}
 
+
+Unlike the IID Gaussian and AR(1) models, this AR(4) model does not have rejection rates all close to $\alpha$ for the independence and exponential tests at neighboring Fourier frequencies. At frequencies closer to 0, the pairwise independence tests fail at rates consistently higher than $\alpha$ and likewise, especially for frequencies less than 1, the periodogram ordinates should not be considered to be asymptotically exponentially distributed. Sparcifying the Fourier frequencies closer to 0 will not change that the periodograms at these frequencies are asymptotically exponential. However, we explore if sparcifying the frequencies closer to 0 will satisfy Result~\ref{res:lahiri} in Section~\ref{sec:sparce}.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -308,30 +312,18 @@ where $\epsilon_t \sim WN(0, \sigma^2)$.
 \end{knitrout}
 
 
-\subsubsection{MA(2)}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
-
-\includegraphics[width=.33\textwidth]{figure/inital-ma21} 
-\includegraphics[width=.33\textwidth]{figure/inital-ma22} 
-\includegraphics[width=.33\textwidth]{figure/inital-ma23} \caption[One draw, periodogram, and spectral density of an MA(2) model]{One draw, periodogram, and spectral density of an MA(2) model.\label{fig:inital-ma2}}
-\end{figure}
-
-
-\end{knitrout}
-
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
-
-\includegraphics[width=.49\textwidth]{figure/tests-ma21} 
-\includegraphics[width=.49\textwidth]{figure/tests-ma22} \caption[Tests of independence and distribution for an MA(2) model]{Tests of independence and distribution for an MA(2) model.\label{fig:tests-ma2}}
-\end{figure}
-
-
-\end{knitrout}
-
-
+% \subsubsection{MA(2)}
+% <<inital-ma2, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an MA(2) model.', fig.pos='H'>>=
+% g_draws.ma2
+% g_perio.ma2
+% g_spec.ma2
+% @
+% 
+% <<tests-ma2, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an MA(2) model.', fig.pos='H'>>=
+% g_ind.ma2
+% g_exp.ma2
+% @
+% 
 \subsubsection{ARMA(4,1)}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -356,29 +348,19 @@ where $\epsilon_t \sim WN(0, \sigma^2)$.
 \end{knitrout}
 
 
-\subsubsection{ARMA(4,2)}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+% \subsubsection{ARMA(4,2)}
+% <<inital-arma42, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an ARMA(4,2) model.', fig.pos='H'>>=
+% g_draws.arma42
+% g_perio.arma42
+% g_spec.arma42
+% @
+% 
+% <<tests-arma42, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an ARMA(4,2) model.', fig.pos='H'>>=
+% g_ind.arma42
+% g_exp.arma42
+% @
 
-\includegraphics[width=.33\textwidth]{figure/inital-arma421} 
-\includegraphics[width=.33\textwidth]{figure/inital-arma422} 
-\includegraphics[width=.33\textwidth]{figure/inital-arma423} \caption[One draw, periodogram, and spectral density of an ARMA(4,2) model]{One draw, periodogram, and spectral density of an ARMA(4,2) model.\label{fig:inital-arma42}}
-\end{figure}
-
-
-\end{knitrout}
-
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
-
-\includegraphics[width=.49\textwidth]{figure/tests-arma421} 
-\includegraphics[width=.49\textwidth]{figure/tests-arma422} \caption[Tests of independence and distribution for an ARMA(4,2) model]{Tests of independence and distribution for an ARMA(4,2) model.\label{fig:tests-arma42}}
-\end{figure}
-
-
-\end{knitrout}
-
+\subsection{Sparcify Frequencies for AR(4)} \label{sec:sparce}
 
 
 \section{Discussion}

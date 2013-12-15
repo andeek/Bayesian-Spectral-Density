@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1.25in]{geometry}
 \usepackage{graphicx, hyperref, float, multicol, pdflscape, enumerate, paralist}
 \usepackage{amssymb,amsmath,amsthm} 
 \usepackage[backend=bibtex, natbib=true]{biblatex}
@@ -15,7 +15,7 @@
 \setlength{\parindent}{0cm}
 \renewcommand{\baselinestretch}{1.5}
 
-\title{Bayesian Estimation of the Spectral Density}
+\title{Independence of Periodogram Ordinates at the Fourier Frequencies}
 \author{Andee Kaplan \& Maggie Johnson}
 
 \begin{document}
