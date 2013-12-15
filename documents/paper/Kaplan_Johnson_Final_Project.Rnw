@@ -33,8 +33,7 @@ load("../../tests.RData")
 <<background, child='parts/background.Rnw', eval=TRUE>>=
 @
 
-
-\section{Models}
+\section{Models}\label{sec:models}
 <<models, child='parts/models.Rnw', eval=TRUE>>=
 @
 
@@ -45,11 +44,6 @@ load("../../tests.RData")
 \subsection{Tests}
 <<tests, child='parts/tests.Rnw', eval=TRUE>>=
 @
-
-\subsection{Implementation}
-<<tests, child='parts/implementation.Rnw', eval=TRUE>>=
-@
-
 
 \section{Results}
 <<results, child='parts/results.Rnw', eval=TRUE>>=

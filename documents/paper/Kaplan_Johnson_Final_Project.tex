@@ -131,8 +131,7 @@ Result~\ref{res:lahiri} lends to the idea that a subset of sufficiently spaced a
 
 
 
-
-\section{Models}
+\section{Models}\label{sec:models}
 
 To explore the asymptotic behavior of the periodogram at the Fourier frequencies, we used several time series models with known spectral densities. The included models are \begin{inparaenum}[\itshape a\upshape)]
 \item IID Gaussian(0, 1);
@@ -196,17 +195,17 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 
 
 
-\subsection{Implementation}
-
-
-
-
 \section{Results}
 
 
 
 
-\subsection{IID Gaussian}
+\subsection{Tests for Full Fourier Decomposition}
+
+We simulated data, periodograms, and spectral densities for each of the five models discussed in Section~\ref{sec:models} using $M=1000, n=500, s=200$ and $\sigma^2=1$. Tests of asymptotic exponential distribution and pairwise independence were conducted first using the entire set of Fourier frequencies, $\{w_j = \frac{2\pi j}{n}, j=1,...,249\}$ for each of the five models.
+
+\subsubsection{IID Gaussian}
+The IID Gaussian white noise model should have periodogram ordinates $I_n(\omega)$ distributed as exactly independent exponentials, regardless of the length of the time series. Figure~\ref{fig:inital-iid} shows the estimated periodogram for one simulated IID Gaussian time series, as well as the constant spectral density. The independence in the time series is clearly seen in the randomness of the periodogram.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -219,6 +218,8 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
+Tests of exponential distribution and pairwise independence of neighboring Fourier frequencies gave rejection rates relatively similar to the $\alpha$-level of 0.05 over 200 simulations, shown in Figure~\ref{fig:tests-iid}. This suggested that the IID Gaussian model results in independent exponentially distributed periodogram ordinates, as expected.
+
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -230,7 +231,12 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
-\subsection{AR(1)}
+\subsubsection{AR(1)}
+The first model considered to test the asymptotic assumptions in Results~\ref{res:first} and~\ref{res:lahiri} was an AR(1) model with $\phi = 0.05$. For a timeseries $\{X_t\}$, this model has the form
+\begin{align}
+x_t = \phi x_{t-1} + \epsilon_t
+\end{align}
+where $\epsilon_t \sim WN(0, \sigma^2)$. 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -254,7 +260,7 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
-\subsection{AR(4)}
+\subsubsection{AR(4)}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -278,7 +284,7 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
-\subsection{MA(1)}
+\subsubsection{MA(1)}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -302,7 +308,7 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
-\subsection{MA(2)}
+\subsubsection{MA(2)}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -326,7 +332,7 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
-\subsection{ARMA(4,1)}
+\subsubsection{ARMA(4,1)}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
@@ -350,7 +356,7 @@ We used a two-sided KS test at the $\alpha = 0.05$-level to test whether the dis
 \end{knitrout}
 
 
-\subsection{ARMA(4,2)}
+\subsubsection{ARMA(4,2)}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
