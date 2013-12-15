@@ -1,5 +1,6 @@
 library(ggplot2)
 load("../../../tests.RData")
+load("../../../df_list.RData")
 
 g_draws.iid <- qplot(1:n, draws.iid[,1], geom="line") +
   xlab("Time") + ylab("Data") +
@@ -161,3 +162,23 @@ g_ind.arma42 <- qplot((1:length(tests.arma42$prop_fails.ind))*2*pi/n, tests.arma
   geom_hline(yintercept=alpha) + geom_smooth(method="loess") + 
   xlab("Frequency") + ylab("Proportion of Fails") +
   ggtitle("Tests of Independence")
+
+
+seg_plot<-function(df, nfreq, space, alpha=0.05, xlims=c(0,250), ylims=c(0,1), df_full){
+  require(gridExtra)
+  df_space<-list()
+  for(i in 1:(space+1)){
+    df_space[[i]]<-rbind(df[seq(i,nfreq, space+1),], df_full[nfreq:nrow(df_full),])
+  }
+  df_p<-lapply(df_space, function(df) qplot(data=df, x=2*pi*x/500, xend=2*pi*xe/500, y=y, yend=y, geom="segment", xlim=xlims, ylim=ylims, xlab="Frequency", ylab="Proportion of Fails", main="Tests of Independence") + 
+                 geom_hline(yintercept=alpha) + geom_smooth(method="loess")) #+ ggtitle(paste("Starting j =", i))
+  p<-do.call(grid.arrange, c(df_p, nrow=1))
+  return(p)
+}
+
+g_space1.ar4<-seg_plot(df.list[[2]], nfreq=60, space=1, xlims=c(0,250), ylims=c(0,.3), df_full=df.list[[1]])
+
+g_space2.ar4<-seg_plot(df.list[[3]], nfreq=60, space=2, xlims=c(0,250), ylims=c(0,.3), df_full=df.list[[1]])
+
+
+
