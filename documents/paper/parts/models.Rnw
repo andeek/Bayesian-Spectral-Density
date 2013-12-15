@@ -2,9 +2,9 @@ To explore the asymptotic behavior of the periodogram at the Fourier frequencies
 \item IID Gaussian(0, \Sexpr{sigma2});
 \item AR(1) with $\phi = \Sexpr{model.ar1$ar}$; 
 \item AR(4) with $\boldsymbol{\phi} = [\Sexpr{paste(model.ar4$ar, collapse=", ")}$];
-\item MA(1) with $\theta = \Sexpr{model.ma1$ma}$;
+\item MA(1) with $\theta = \Sexpr{model.ma1$ma}$; and
 %\item MA(2) with $\boldsymbol{\theta} = [\Sexpr{paste(model.ma2$ma, collapse=", ")}$];
-\item ARMA(4,1) with $\boldsymbol{\phi} = [\Sexpr{paste(model.arma41$ar, collapse=", ")}$] and $\theta = \Sexpr{model.arma41$ma}$; and
+\item ARMA(4,1) with $\boldsymbol{\phi} = [\Sexpr{paste(model.arma41$ar, collapse=", ")}$] and $\theta = \Sexpr{model.arma41$ma}$
 %\item ARMA(4,2) with $\boldsymbol{\phi} = [\Sexpr{paste(model.arma42$ar, collapse=", ")}$] and $\boldsymbol{\theta} = [\Sexpr{paste(model.arma42$ma, collapse=", ")}$].
 \end{inparaenum}
 
@@ -15,7 +15,7 @@ The following result about the IID Gaussian model provides knowledge of the exac
 For $\{X_t\} \stackrel{\text{IID}}{\sim} \text{N}(0,\sigma^2)$, the periodogram values $\left\{ I_n(\omega_j): \omega_j \in \mathcal{F}_n, \omega_j \not\in \{0,\pi\} \right\}$ are IID Exponential($\sigma^2$) random variables \cite{brockwell2002introduction}.
 \end{res}
 
-This model was used as an initial baseline check to support the testing procedure of independent exponentially distributed ordinates. If our procedure showed failure with the IID Gaussian white noise model, then this would be an indication of an issue with the procedure, rather than the frequency spacings. The spectral density of the IID Gaussian model is $f_x(\omega) = \sigma^2/2\pi, \omega \in [-\pi, \pi]$.
+This model was used as an initial baseline check to support the testing procedure of independent exponentially distributed ordinates. If our procedure showed failure with the IID Gaussian white noise model, then this would be an indication of an issue with the procedure, rather than the frequency spacings. The spectral density of the IID Gaussian model is $f_X(\omega) = \sigma^2/2\pi, \omega \in [-\pi, \pi]$.
 
 \subsubsection*{ARMA(p,q)}
 We exclusively used ARMA models as our experimental models because the spectral density of an ARMA model has a known and closed form. An ARMA model is a process $\{X_t\}$ with the form $\phi(B)X_t = \theta(B)Z_t$ where $B$ is the backshift operator and $\{Z_t\}$ is WN(0,$\sigma^2$). Models of this form have spectral density

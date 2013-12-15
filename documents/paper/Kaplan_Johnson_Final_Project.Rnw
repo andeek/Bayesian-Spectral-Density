@@ -17,6 +17,7 @@
 
 \title{Independence of Periodogram Ordinates at the Fourier Frequencies}
 \author{Andee Kaplan \& Maggie Johnson}
+\date{December 16, 2013}
 
 \begin{document}
 

@@ -2,7 +2,7 @@ Spectral analysis, or ``frequency domain analysis" is the analysis of stationary
 \begin{align}
 f(\omega) = \frac{1}{2\pi} \sum_{h=-\infty}^{\infty} e^{-ih\omega} \gamma(h), \hspace{.5cm} -\infty < \omega < \infty
 \end{align}
-where $e^{i\omega}=cos(\omega)+isin(\omega)$ and $i=sqrt(-1)$ \cite{brockwell2002introduction}. The periodogram, $I_n(\cdot)$ of $\{X_t\}$ can be regarded as a \mj{sample analogue} of $2\pi f(\cdot)$ \cite{brockwell2002introduction}. The periodogram of $\{x_1,...,x_n\}$ at a frequencey $\omega$ is the function
+where $e^{i\omega}=\cos(\omega)+i\sin(\omega)$ and $i=sqrt(-1)$ \cite{brockwell2002introduction}. The periodogram, $I_n(\cdot)$ of $\{X_t\}$ can be regarded as a sample estimator of $2\pi f(\cdot)$ \cite{brockwell2002introduction}. The periodogram of $\{x_1,...,x_n\}$ at a frequencey $\omega$ is the function
 \begin{align}
 I_n(\omega) = \frac{1}{n} \left\lvert \sum_{t=1}^n x_t e^{-it\omega} \right\rvert^2
 \end{align}
@@ -11,7 +11,7 @@ I_n(\omega) = \frac{1}{n} \left\lvert \sum_{t=1}^n x_t e^{-it\omega} \right\rver
 Let $f(\omega_r) \not= 0, 1 \le r \le k$ where $f$ denotes the spectral density of a stationary time series $\{X_t\}$. Then when $n\rightarrow \infty$ the joint distribution of the periodogram at $\omega_r$, $I_n(\omega_r)$, tends to that of $k$ mutually indepependent random variables distributed as $\text{Exponential}(2\pi f(\omega_r))$ for $0<\omega_r<\pi$ \cite{brockwell2002introduction}. 
 \end{res}
 
-Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies, $\{\omega_j = 2\pi j/n : j=1,...,n\}$, in a fixed time period. \mj{\cite{brockwell2002introduction}}. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ \mj{(dig into reference to flesh this out)}. Lahiri \cite{lahiri2003necessary} derived two results that describe behavior required for a set of frequencies to satisfy the asymptotic independence assumption in Result~\ref{res:first}
+Result~\ref{res:first} describes the asymptotic distribution of a periodogram at fixed frequencies. In practice, this result has often been used with the Fourier frequencies, $\{\omega_j = 2\pi j/n : j=1,...,n\}$, in a fixed time period. \cite{brockwell2002introduction}. However, it has been shown that the asymptotic behavior of the periodogram at the Fourier frequencies does not hold as $n \rightarrow \infty$ by SN Lahiri \cite{lahiri2003necessary}. In his paper, ``A necessary and sufficient condition for asymptotic independence of discrete Fourier transforms under short-and long-range dependence", Lahiri also derived two results that describe behavior required for a set of frequencies to satisfy the asymptotic independence assumption in result~\ref{res:first}.
 
 \begin{res} \label{res:lahiri}
 In the absense of data tapering,
@@ -24,10 +24,10 @@ In the absense of data tapering,
 
 %Result~\ref{res:first} gives us the asymptotic distribution of a periodogram at fixed frequencies, while result~\ref{res:lahiri} details properties of frequencies that define where the independence holds. 
 
-Results~\ref{res:first} and ~\ref{res:lahiri} lend to the question: ``Can a subset of sufficiently spaced and and distant from 0 \textit{Fourier} frequencies be constructed such that the periodogram ordinates at these frequencies are asymptotically independent and exponentially distributed?" We explore these two results to determine if, for large $n$,
+Results~\ref{res:first} and ~\ref{res:lahiri} lend to the question: ``Can a subset of sufficiently spaced and and distant from zero \textit{Fourier} frequencies be constructed such that the periodogram ordinates at these frequencies are asymptotically independent and exponentially distributed?" We explore these two results to determine if, for large $n$,
 \begin{enumerate}
-  \item Result~\ref{res:first} will not, in fact, hold at the Fourier frequencies, and
-  \item if (1) is true, a \mj{usable} subset of Fourier frequencies can be constructed such that Result~\ref{res:first} holds.
+  \item result~\ref{res:first} will not, in fact, hold at the Fourier frequencies, and
+  \item if (1) is true, a usable subset of Fourier frequencies can be constructed such that result~\ref{res:first} holds.
 \end{enumerate}
 
 %at at what point distant from zero and at what spacings close to zero do the approximate independence and exponential distribution fail in the periodogram values. 
