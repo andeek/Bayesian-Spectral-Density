@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2011.11.3)  15 DEC 2013 21:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.8)  16 DEC 2013 08:52
 entering extended mode
 **Kaplan_Johnson_Final_Project.tex
 
-(C:\Users\Andee\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kapl
-an_Johnson_Final_Project.tex
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kap
+lan_Johnson_Final_Project.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -54,10 +54,10 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
 ))
@@ -72,15 +72,14 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip43
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\fra
+med.sty
+Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
 \fb@frw=\dimen105
 \fb@frh=\dimen106
 \FrameRule=\dimen107
 \FrameSep=\dimen108
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
@@ -91,7 +90,7 @@ Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
-Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
@@ -112,88 +111,92 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2011/08/19 v6.82h Hypertext links for LaTeX
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
-Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
-Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
-Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
-Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
-Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen117
 \Hy@linkcounter=\count91
 \Hy@pagecounter=\count92
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2011/08/19 v6.82h Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count93
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4053.
-Package hyperref Info: Link nesting OFF on input line 4058.
-Package hyperref Info: Hyper index ON on input line 4061.
-Package hyperref Info: Plain pages OFF on input line 4068.
-Package hyperref Info: Backreferencing OFF on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4291.
+Package hyperref Info: Bookmarks ON on input line 4300.
 \c@Hy@tempcnt=\count94
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4644.
+LaTeX Info: Redefining \url on input line 4653.
 \Fld@menulength=\count95
 \Field@Width=\dimen118
 \Fld@charsize=\dimen119
-Package hyperref Info: Hyper figures OFF on input line 5730.
-Package hyperref Info: Link nesting OFF on input line 5735.
-Package hyperref Info: Hyper index ON on input line 5738.
-Package hyperref Info: backreferencing OFF on input line 5745.
-Package hyperref Info: Link coloring OFF on input line 5750.
-Package hyperref Info: Link coloring with OCG OFF on input line 5755.
-Package hyperref Info: PDF/A mode OFF on input line 5760.
-LaTeX Info: Redefining \ref on input line 5800.
-LaTeX Info: Redefining \pageref on input line 5804.
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
 \Hy@abspage=\count96
 \c@Item=\count97
 \c@Hfootnote=\count98
@@ -202,7 +205,7 @@ LaTeX Info: Redefining \pageref on input line 5804.
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2011/08/19 v6.82h Hyperref driver for pdfTeX
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
 \Fld@listcount=\count99
 \c@bookmark@seq@number=\count100
 
@@ -211,7 +214,7 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip44
+\Hy@SectionHShift=\skip43
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -235,8 +238,8 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \page@free=\dimen122
 \premulticols=\dimen123
 \postmulticols=\dimen124
-\multicolsep=\skip45
-\multicolbaselineskip=\skip46
+\multicolsep=\skip44
+\multicolbaselineskip=\skip45
 \partial@page=\box29
 \last@line=\box30
 \mult@rightbox=\box31
@@ -270,7 +273,7 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \multicol@sort@counter=\count110
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
-Package: pdflscape 2008/08/11 v0.10 Landscape pages in PDF (HO)
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
@@ -283,10 +286,10 @@ Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\paralist\paralist.sty"
 Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
-\pltopsep=\skip47
-\plpartopsep=\skip48
-\plitemsep=\skip49
-\plparsep=\skip50
+\pltopsep=\skip46
+\plpartopsep=\skip47
+\plitemsep=\skip48
+\plparsep=\skip49
 \pl@lab=\toks19
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
@@ -302,7 +305,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip51
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
@@ -352,8 +355,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \totwidth@=\dimen135
 \lineht@=\dimen136
 \@envbody=\toks24
-\multlinegap=\skip52
-\multlinetaggap=\skip53
+\multlinegap=\skip51
+\multlinetaggap=\skip52
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -365,19 +368,19 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headfont=\toks28
 \thm@notefont=\toks29
 \thm@headpunct=\toks30
-\thm@preskip=\skip54
-\thm@postskip=\skip55
-\thm@headsep=\skip56
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
 \dth@everypar=\toks31
 )
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
 Package: biblatex 2013/11/25 v2.8a programmable bibliographies (PK/JW/AB)
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex1.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex1.sty"
 Package: biblatex1 2013/11/25 v2.8a programmable bibliographies (bibtex) (PK/JW
 /AB)
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
@@ -386,11 +389,11 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 )
 \etb@tempcnta=\count124
 )
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count125
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -431,15 +434,15 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \blx@notetype=\count158
 \blx@parenlevel@text=\count159
 \blx@parenlevel@foot=\count160
-\labelnumberwidth=\skip57
-\labelalphawidth=\skip58
-\shorthandwidth=\skip59
-\biblabelsep=\skip60
-\bibitemsep=\skip61
-\bibnamesep=\skip62
-\bibinitsep=\skip63
-\bibparsep=\skip64
-\bibhang=\skip65
+\labelnumberwidth=\skip56
+\labelalphawidth=\skip57
+\shorthandwidth=\skip58
+\biblabelsep=\skip59
+\bibitemsep=\skip60
+\bibnamesep=\skip61
+\bibinitsep=\skip62
+\bibparsep=\skip63
+\bibhang=\skip64
 \blx@auxin=\read1
 \blx@auxout=\write3
 \c@mincomprange=\count161
@@ -514,13 +517,13 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-compat.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def"
 File: blx-compat.def 2013/11/25 v2.8a biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 
 \c@textcitecount=\count230
 \c@textcitetotal=\count231
@@ -534,25 +537,26 @@ Normal \count register pool exhausted, switching to extended pool.
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-natbib.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-natbib.def"
 File: blx-natbib.def 2013/11/25 v2.8a biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\numeric.bbx
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\numeric.bbx"
 File: numeric.bbx 2013/11/25 v2.8a biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\standard.bbx
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2013/11/25 v2.8a biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count280
 \c@bbx:relatedtotal=\count281
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
- (C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\numeric.cbx
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\numeric.cbx"
 File: numeric.cbx 2013/11/25 v2.8a biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -568,34 +572,41 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.cfg
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
 )))
 \c@res=\count282
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-(C:\Users\Andee\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\english.lbx
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count283
 \@quotereset=\count284
 
-(C:\Users\Andee\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kapl
-an_Johnson_Final_Project.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kap
+lan_Johnson_Final_Project.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -646,7 +657,7 @@ LaTeX Font Info:    ... okay on input line 72.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring OFF on input line 72.
+Package hyperref Info: Link coloring OFF on input line 77.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -655,14 +666,14 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count291
 )
-LaTeX Info: Redefining \ref on input line 72.
-LaTeX Info: Redefining \pageref on input line 72.
-LaTeX Info: Redefining \nameref on input line 72.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 
-(C:\Users\Andee\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kapl
-an_Johnson_Final_Project.out)
-(C:\Users\Andee\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kapl
-an_Johnson_Final_Project.out)
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kap
+lan_Johnson_Final_Project.out)
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kap
+lan_Johnson_Final_Project.out)
 \@outlinefile=\write4
 Package biblatex Info: No input encoding detected.
 (biblatex)             Assuming 'ascii'.
@@ -671,151 +682,151 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Kaplan_Johnson_Final_Project.bbl' found.
 
-(C:\Users\Andee\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kapl
-an_Johnson_Final_Project.bbl)
-Package biblatex Info: Reference section=0 on input line 72.
-Package biblatex Info: Reference segment=0 on input line 72.
-LaTeX Font Info:    Try loading font information for U+msa on input line 75.
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kap
+lan_Johnson_Final_Project.bbl)
+Package biblatex Info: Reference section=0 on input line 77.
+Package biblatex Info: Reference segment=0 on input line 77.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 75.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/Users/Andee/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-Overfull \hbox (0.17809pt too wide) in paragraph at lines 181--182
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+Overfull \hbox (0.17809pt too wide) in paragraph at lines 186--187
 \OT1/cmr/m/n/10 to test the null hy-poth-e-sis, $\OML/cmm/m/it/10 H[] \OT1/cmr/
 m/n/10 : []\OML/cmm/m/it/10 X[][]Y[][]$\OT1/cmr/m/n/10 ,
  []
 
 [4]
-Package color Info: Redefining color shadecolor on input line 206.
+Package color Info: Redefining color shadecolor on input line 211.
  <figure/inital-iid1.pdf, id=157, 361.35pt x 361.35pt>
 File: figure/inital-iid1.pdf Graphic file (type pdf)
 
 <use figure/inital-iid1.pdf>
-Package pdftex.def Info: figure/inital-iid1.pdf used on input line 208.
+Package pdftex.def Info: figure/inital-iid1.pdf used on input line 213.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-iid2.pdf, id=158, 361.35pt x 361.35pt>
 File: figure/inital-iid2.pdf Graphic file (type pdf)
 
 <use figure/inital-iid2.pdf>
-Package pdftex.def Info: figure/inital-iid2.pdf used on input line 209.
+Package pdftex.def Info: figure/inital-iid2.pdf used on input line 214.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-iid3.pdf, id=159, 361.35pt x 361.35pt>
 File: figure/inital-iid3.pdf Graphic file (type pdf)
 
 <use figure/inital-iid3.pdf>
-Package pdftex.def Info: figure/inital-iid3.pdf used on input line 210.
+Package pdftex.def Info: figure/inital-iid3.pdf used on input line 215.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package color Info: Redefining color shadecolor on input line 220.
+Package color Info: Redefining color shadecolor on input line 225.
 <figure/tests-iid1.pdf, id=161, 505.89pt x 361.35pt>
 File: figure/tests-iid1.pdf Graphic file (type pdf)
 
 <use figure/tests-iid1.pdf>
-Package pdftex.def Info: figure/tests-iid1.pdf used on input line 222.
+Package pdftex.def Info: figure/tests-iid1.pdf used on input line 227.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 <figure/tests-iid2.pdf, id=162, 505.89pt x 361.35pt>
 File: figure/tests-iid2.pdf Graphic file (type pdf)
 
 <use figure/tests-iid2.pdf>
-Package pdftex.def Info: figure/tests-iid2.pdf used on input line 223.
+Package pdftex.def Info: figure/tests-iid2.pdf used on input line 228.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5]
-Package color Info: Redefining color shadecolor on input line 237.
+Package color Info: Redefining color shadecolor on input line 242.
  <figure/inital-ar11.pdf, id=174, 361.35pt x 361.35pt>
 File: figure/inital-ar11.pdf Graphic file (type pdf)
 
 <use figure/inital-ar11.pdf>
-Package pdftex.def Info: figure/inital-ar11.pdf used on input line 239.
+Package pdftex.def Info: figure/inital-ar11.pdf used on input line 244.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-ar12.pdf, id=175, 361.35pt x 361.35pt>
 File: figure/inital-ar12.pdf Graphic file (type pdf)
 
 <use figure/inital-ar12.pdf>
-Package pdftex.def Info: figure/inital-ar12.pdf used on input line 240.
+Package pdftex.def Info: figure/inital-ar12.pdf used on input line 245.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-ar13.pdf, id=176, 361.35pt x 361.35pt>
 File: figure/inital-ar13.pdf Graphic file (type pdf)
 
 <use figure/inital-ar13.pdf>
-Package pdftex.def Info: figure/inital-ar13.pdf used on input line 241.
+Package pdftex.def Info: figure/inital-ar13.pdf used on input line 246.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package color Info: Redefining color shadecolor on input line 251.
+Package color Info: Redefining color shadecolor on input line 256.
 <figure/tests-ar11.pdf, id=178, 505.89pt x 361.35pt>
 File: figure/tests-ar11.pdf Graphic file (type pdf)
 
 <use figure/tests-ar11.pdf>
-Package pdftex.def Info: figure/tests-ar11.pdf used on input line 253.
+Package pdftex.def Info: figure/tests-ar11.pdf used on input line 258.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 <figure/tests-ar12.pdf, id=179, 505.89pt x 361.35pt>
 File: figure/tests-ar12.pdf Graphic file (type pdf)
 
 <use figure/tests-ar12.pdf>
-Package pdftex.def Info: figure/tests-ar12.pdf used on input line 254.
+Package pdftex.def Info: figure/tests-ar12.pdf used on input line 259.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
  [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 \end{figure}
+l.260 \end{figure}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 \end{figure}
-                   <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/d
-ocuments/paper/figure/inital-iid1.pdf> <C:/Users/Andee/Documents/GitHub/Bayesia
-n-Spectral-Density/documents/paper/figure/inital-iid2.pdf> <C:/Users/Andee/Docu
-ments/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-iid3.pdf> 
-<C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figu
-re/tests-iid1.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/d
-ocuments/paper/figure/tests-iid2.pdf>]
-Package color Info: Redefining color shadecolor on input line 264.
+l.260 \end{figure}
+                   <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/
+documents/paper/figure/inital-iid1.pdf> <C:/Users/Maggie/Documents/GitHub/Bayes
+ian-Spectral-Density/documents/paper/figure/inital-iid2.pdf> <C:/Users/Maggie/D
+ocuments/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-iid3.pd
+f> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/
+figure/tests-iid1.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Dens
+ity/documents/paper/figure/tests-iid2.pdf>]
+Package color Info: Redefining color shadecolor on input line 269.
 
 <figure/inital-ar41.pdf, id=219, 361.35pt x 361.35pt>
 File: figure/inital-ar41.pdf Graphic file (type pdf)
 
 <use figure/inital-ar41.pdf>
-Package pdftex.def Info: figure/inital-ar41.pdf used on input line 266.
+Package pdftex.def Info: figure/inital-ar41.pdf used on input line 271.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-ar42.pdf, id=220, 361.35pt x 361.35pt>
 File: figure/inital-ar42.pdf Graphic file (type pdf)
 
 <use figure/inital-ar42.pdf>
-Package pdftex.def Info: figure/inital-ar42.pdf used on input line 267.
+Package pdftex.def Info: figure/inital-ar42.pdf used on input line 272.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-ar43.pdf, id=221, 361.35pt x 361.35pt>
 File: figure/inital-ar43.pdf Graphic file (type pdf)
 
 <use figure/inital-ar43.pdf>
-Package pdftex.def Info: figure/inital-ar43.pdf used on input line 268.
+Package pdftex.def Info: figure/inital-ar43.pdf used on input line 273.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 
@@ -826,146 +837,146 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.276 
+l.281 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.276 
-       <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/inital-ar11.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-D
-ensity/documents/paper/figure/inital-ar12.pdf> <C:/Users/Andee/Documents/GitHub
-/Bayesian-Spectral-Density/documents/paper/figure/inital-ar13.pdf> <C:/Users/An
-dee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ar1
-1.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/tests-ar12.pdf>]
-Package color Info: Redefining color shadecolor on input line 278.
+l.281 
+       <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/pa
+per/figure/inital-ar11.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral
+-Density/documents/paper/figure/inital-ar12.pdf> <C:/Users/Maggie/Documents/Git
+Hub/Bayesian-Spectral-Density/documents/paper/figure/inital-ar13.pdf> <C:/Users
+/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests
+-ar11.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/document
+s/paper/figure/tests-ar12.pdf>]
+Package color Info: Redefining color shadecolor on input line 283.
 
 <figure/tests-ar41.pdf, id=264, 505.89pt x 361.35pt>
 File: figure/tests-ar41.pdf Graphic file (type pdf)
 
 <use figure/tests-ar41.pdf>
-Package pdftex.def Info: figure/tests-ar41.pdf used on input line 280.
+Package pdftex.def Info: figure/tests-ar41.pdf used on input line 285.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 <figure/tests-ar42.pdf, id=265, 505.89pt x 361.35pt>
 File: figure/tests-ar42.pdf Graphic file (type pdf)
 
 <use figure/tests-ar42.pdf>
-Package pdftex.def Info: figure/tests-ar42.pdf used on input line 281.
+Package pdftex.def Info: figure/tests-ar42.pdf used on input line 286.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
-Package color Info: Redefining color shadecolor on input line 295.
+Package color Info: Redefining color shadecolor on input line 300.
 
 <figure/inital-ma11.pdf, id=267, 361.35pt x 361.35pt>
 File: figure/inital-ma11.pdf Graphic file (type pdf)
 
 <use figure/inital-ma11.pdf>
-Package pdftex.def Info: figure/inital-ma11.pdf used on input line 297.
+Package pdftex.def Info: figure/inital-ma11.pdf used on input line 302.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-ma12.pdf, id=268, 361.35pt x 361.35pt>
 File: figure/inital-ma12.pdf Graphic file (type pdf)
 
 <use figure/inital-ma12.pdf>
-Package pdftex.def Info: figure/inital-ma12.pdf used on input line 298.
+Package pdftex.def Info: figure/inital-ma12.pdf used on input line 303.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-ma13.pdf, id=269, 361.35pt x 361.35pt>
 File: figure/inital-ma13.pdf Graphic file (type pdf)
 
 <use figure/inital-ma13.pdf>
-Package pdftex.def Info: figure/inital-ma13.pdf used on input line 299.
+Package pdftex.def Info: figure/inital-ma13.pdf used on input line 304.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.301 
+l.306 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.301 
-       <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/inital-ar41.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-D
-ensity/documents/paper/figure/inital-ar42.pdf> <C:/Users/Andee/Documents/GitHub
-/Bayesian-Spectral-Density/documents/paper/figure/inital-ar43.pdf> <C:/Users/An
-dee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests-ar4
-1.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/tests-ar42.pdf>]
-Package color Info: Redefining color shadecolor on input line 309.
+l.306 
+       <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/pa
+per/figure/inital-ar41.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral
+-Density/documents/paper/figure/inital-ar42.pdf> <C:/Users/Maggie/Documents/Git
+Hub/Bayesian-Spectral-Density/documents/paper/figure/inital-ar43.pdf> <C:/Users
+/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/tests
+-ar41.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/document
+s/paper/figure/tests-ar42.pdf>]
+Package color Info: Redefining color shadecolor on input line 314.
 
 <figure/tests-ma11.pdf, id=309, 505.89pt x 361.35pt>
 File: figure/tests-ma11.pdf Graphic file (type pdf)
 
 <use figure/tests-ma11.pdf>
-Package pdftex.def Info: figure/tests-ma11.pdf used on input line 311.
+Package pdftex.def Info: figure/tests-ma11.pdf used on input line 316.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 <figure/tests-ma12.pdf, id=310, 505.89pt x 361.35pt>
 File: figure/tests-ma12.pdf Graphic file (type pdf)
 
 <use figure/tests-ma12.pdf>
-Package pdftex.def Info: figure/tests-ma12.pdf used on input line 312.
+Package pdftex.def Info: figure/tests-ma12.pdf used on input line 317.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
  [9pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.335 \end{align}
+l.340 \end{align}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{figure.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.335 \end{align}
-                  <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/do
-cuments/paper/figure/inital-ma11.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian
--Spectral-Density/documents/paper/figure/inital-ma12.pdf> <C:/Users/Andee/Docum
-ents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-ma13.pdf> <
-C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figur
-e/tests-ma11.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/do
-cuments/paper/figure/tests-ma12.pdf>]
-Package color Info: Redefining color shadecolor on input line 338.
+l.340 \end{align}
+                  <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/d
+ocuments/paper/figure/inital-ma11.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesi
+an-Spectral-Density/documents/paper/figure/inital-ma12.pdf> <C:/Users/Maggie/Do
+cuments/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-ma13.pdf
+> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/f
+igure/tests-ma11.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Densi
+ty/documents/paper/figure/tests-ma12.pdf>]
+Package color Info: Redefining color shadecolor on input line 343.
 
 <figure/inital-arma411.pdf, id=349, 361.35pt x 361.35pt>
 File: figure/inital-arma411.pdf Graphic file (type pdf)
 
 <use figure/inital-arma411.pdf>
-Package pdftex.def Info: figure/inital-arma411.pdf used on input line 340.
+Package pdftex.def Info: figure/inital-arma411.pdf used on input line 345.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-arma412.pdf, id=350, 361.35pt x 361.35pt>
 File: figure/inital-arma412.pdf Graphic file (type pdf)
 
 <use figure/inital-arma412.pdf>
-Package pdftex.def Info: figure/inital-arma412.pdf used on input line 341.
+Package pdftex.def Info: figure/inital-arma412.pdf used on input line 346.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/inital-arma413.pdf, id=351, 361.35pt x 361.35pt>
 File: figure/inital-arma413.pdf Graphic file (type pdf)
 
 <use figure/inital-arma413.pdf>
-Package pdftex.def Info: figure/inital-arma413.pdf used on input line 342.
+Package pdftex.def Info: figure/inital-arma413.pdf used on input line 347.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
-Package color Info: Redefining color shadecolor on input line 352.
+Package color Info: Redefining color shadecolor on input line 357.
 
 <figure/tests-arma411.pdf, id=354, 505.89pt x 361.35pt>
 File: figure/tests-arma411.pdf Graphic file (type pdf)
 
 <use figure/tests-arma411.pdf>
-Package pdftex.def Info: figure/tests-arma411.pdf used on input line 354.
+Package pdftex.def Info: figure/tests-arma411.pdf used on input line 359.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 <figure/tests-arma412.pdf, id=355, 505.89pt x 361.35pt>
 File: figure/tests-arma412.pdf Graphic file (type pdf)
 
 <use figure/tests-arma412.pdf>
-Package pdftex.def Info: figure/tests-arma412.pdf used on input line 355.
+Package pdftex.def Info: figure/tests-arma412.pdf used on input line 360.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 
@@ -976,47 +987,46 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.376 
-       <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/inital-arma411.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectra
-l-Density/documents/paper/figure/inital-arma412.pdf> <C:/Users/Andee/Documents/
-GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-arma413.pdf>]
-Package color Info: Redefining color shadecolor on input line 378.
-
+l.381 
+       <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/pa
+per/figure/inital-arma411.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spect
+ral-Density/documents/paper/figure/inital-arma412.pdf> <C:/Users/Maggie/Documen
+ts/GitHub/Bayesian-Spectral-Density/documents/paper/figure/inital-arma413.pdf>]
+Package color Info: Redefining color shadecolor on input line 383.
 <figure/space1-ar41.pdf, id=383, 505.89pt x 361.35pt>
 File: figure/space1-ar41.pdf Graphic file (type pdf)
 
 <use figure/space1-ar41.pdf>
-Package pdftex.def Info: figure/space1-ar41.pdf used on input line 380.
+Package pdftex.def Info: figure/space1-ar41.pdf used on input line 385.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
 
 <figure/space1-ar42.pdf, id=384, 505.89pt x 361.35pt>
 File: figure/space1-ar42.pdf Graphic file (type pdf)
 
 <use figure/space1-ar42.pdf>
-Package pdftex.def Info: figure/space1-ar42.pdf used on input line 381.
+Package pdftex.def Info: figure/space1-ar42.pdf used on input line 386.
 (pdftex.def)             Requested size: 212.47618pt x 151.77147pt.
-Package color Info: Redefining color shadecolor on input line 389.
+Package color Info: Redefining color shadecolor on input line 394.
 
 <figure/space2-ar41.pdf, id=385, 361.35pt x 361.35pt>
 File: figure/space2-ar41.pdf Graphic file (type pdf)
 
 <use figure/space2-ar41.pdf>
-Package pdftex.def Info: figure/space2-ar41.pdf used on input line 391.
+Package pdftex.def Info: figure/space2-ar41.pdf used on input line 396.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/space2-ar42.pdf, id=386, 361.35pt x 361.35pt>
 File: figure/space2-ar42.pdf Graphic file (type pdf)
 
 <use figure/space2-ar42.pdf>
-Package pdftex.def Info: figure/space2-ar42.pdf used on input line 392.
+Package pdftex.def Info: figure/space2-ar42.pdf used on input line 397.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 <figure/space2-ar43.pdf, id=387, 361.35pt x 361.35pt>
 File: figure/space2-ar43.pdf Graphic file (type pdf)
 
 <use figure/space2-ar43.pdf>
-Package pdftex.def Info: figure/space2-ar43.pdf used on input line 393.
+Package pdftex.def Info: figure/space2-ar43.pdf used on input line 398.
 (pdftex.def)             Requested size: 143.09538pt x 143.09283pt.
 
 
@@ -1027,48 +1037,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.401 
+l.406 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.401 
-       <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/tests-arma411.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral
--Density/documents/paper/figure/tests-arma412.pdf> <C:/Users/Andee/Documents/Gi
-tHub/Bayesian-Spectral-Density/documents/paper/figure/space1-ar41.pdf> <C:/User
-s/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/space
-1-ar42.pdf>] [12pdfTeX warning (ext4): destination with the same identifier (na
-me{figure.12}) has been already used, duplicate ignored
+l.406 
+       <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/pa
+per/figure/tests-arma411.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectr
+al-Density/documents/paper/figure/tests-arma412.pdf> <C:/Users/Maggie/Documents
+/GitHub/Bayesian-Spectral-Density/documents/paper/figure/space1-ar41.pdf> <C:/U
+sers/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/paper/figure/s
+pace1-ar42.pdf>] [12pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.408 
-       <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-Density/documents/pap
-er/figure/space2-ar41.pdf> <C:/Users/Andee/Documents/GitHub/Bayesian-Spectral-D
-ensity/documents/paper/figure/space2-ar42.pdf> <C:/Users/Andee/Documents/GitHub
-/Bayesian-Spectral-Density/documents/paper/figure/space2-ar43.pdf>] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
+l.413 
+       <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral-Density/documents/pa
+per/figure/space2-ar41.pdf> <C:/Users/Maggie/Documents/GitHub/Bayesian-Spectral
+-Density/documents/paper/figure/space2-ar42.pdf> <C:/Users/Maggie/Documents/Git
+Hub/Bayesian-Spectral-Density/documents/paper/figure/space2-ar43.pdf>] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
 
 [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
 
-(C:\Users\Andee\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kapl
-an_Johnson_Final_Project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
+(C:\Users\Maggie\Documents\GitHub\Bayesian-Spectral-Density\documents\paper\Kap
+lan_Johnson_Final_Project.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
 Package rerunfilecheck Info: File `Kaplan_Johnson_Final_Project.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: 8C2D352B595C3F056C31F006FCF19CE7;848.
 Package logreq Info: Writing requests to 'Kaplan_Johnson_Final_Project.run.xml'
 .
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
  ) 
 Here is how much of TeX's memory you used:
- 11904 strings out of 494045
- 186618 string characters out of 3148387
- 383253 words of memory out of 3000000
- 14931 multiletter control sequences out of 15000+200000
+ 11927 strings out of 494045
+ 186640 string characters out of 3148385
+ 385999 words of memory out of 3000000
+ 14952 multiletter control sequences out of 15000+200000
  14996 words of font info for 56 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  37i,10n,49p,1448b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1087,7 +1098,7 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmti7.pfb>
-Output written on Kaplan_Johnson_Final_Project.pdf (14 pages, 461618 bytes).
+Output written on Kaplan_Johnson_Final_Project.pdf (14 pages, 461589 bytes).
 PDF statistics:
  545 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 500000)

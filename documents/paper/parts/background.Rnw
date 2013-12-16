@@ -2,7 +2,7 @@ Spectral analysis, or ``frequency domain analysis" is the analysis of stationary
 \begin{align}
 f(\omega) = \frac{1}{2\pi} \sum_{h=-\infty}^{\infty} e^{-ih\omega} \gamma(h), \hspace{.5cm} -\infty < \omega < \infty
 \end{align}
-where $e^{i\omega}=\cos(\omega)+i\sin(\omega)$ and $i=sqrt(-1)$ \cite{brockwell2002introduction}. The periodogram, $I_n(\cdot)$ of $\{X_t\}$ can be regarded as a sample estimator of $2\pi f(\cdot)$ \cite{brockwell2002introduction}. The periodogram of $\{x_1,...,x_n\}$ at a frequencey $\omega$ is the function
+where $e^{i\omega}=\cos(\omega)+i\sin(\omega)$ and $i=\sqrt(-1)$ \cite{brockwell2002introduction}. The periodogram, $I_n(\cdot)$ of $\{X_t\}$ can be regarded as a sample estimator of $2\pi f(\cdot)$ \cite{brockwell2002introduction}. The periodogram of $\{x_1,...,x_n\}$ at a frequencey $\omega$ is the function
 \begin{align}
 I_n(\omega) = \frac{1}{n} \left\lvert \sum_{t=1}^n x_t e^{-it\omega} \right\rvert^2
 \end{align}
