@@ -7,7 +7,7 @@ source("../../../code/plots.R")
 We simulated data, periodograms, and spectral densities for each of the five models discussed in section~\ref{sec:models} using $M=1000, n=500, s=200$ and $\sigma^2=1$. Tests of asymptotic exponential distribution and pairwise independence for neighboring frequencies were conducted first using the entire set of Fourier frequencies, $\{w_j = \frac{2\pi j}{n}, j=1,...,249\}$ for each of the five models.
 
 \subsubsection{IID Gaussian}
-The IID Gaussian white noise model should have periodogram ordinates $I_n(\omega)$ distributed as exactly independent exponentials, regardless of the length of the time series. Figure~\ref{fig:inital-iid} shows the estimated periodogram for one simulated IID Gaussian time series, as well as the constant spectral density. The independence in the time series is clearly seen in the randomness of the periodogram.
+The IID Gaussian white noise model should have periodogram ordinates $I_n(\omega)$ distributed as exactly independent exponentials, regardless of the length of the time series. Figure~\ref{fig:inital-iid} shows the estimated periodogram for one simulated IID Gaussian time series, as well as the constant spectral density. The independence in the time series is seen in the randomness of the periodogram.
 <<inital-iid, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of a Gaussian IID Model.', fig.pos='h'>>=
 g_draws.iid
 g_perio.iid
@@ -34,20 +34,21 @@ g_spec.ar1
 @
 
 The tests of exponential distributions and pairwise independence also gave rejection results consistent with the Type I error rate. Therefore, there was no indication that result~\ref{res:first} does not hold at the Fourier frequencies for an AR(1) model with $\phi=0.5$. This was not entirely surprising as an AR(1) model has only slightly more structure than a white noise model as it represents dependence between neighboring time points only.
+
 <<tests-ar1, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an AR(1) model.', fig.pos='h'>>=
 g_ind.ar1
 g_exp.ar1
 @
 
 \subsubsection{AR(4)}
-To experiment with a time series with a slightly more long-term structure, we implemented an AR(4) model with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45]$. The estimated periodogram, for simulated time series following this model, is dominated by frequencies very close to zero, figure~\ref{fig:inital-ar4}. 
+To experiment with a time series with a more long-term structure, we implemented an AR(4) model with $\boldsymbol{\phi} = [0.08, 0.33, 0.1, 0.45]$. The estimated periodogram, for simulated time series following this model, is dominated by frequencies very close to zero, figure~\ref{fig:inital-ar4}. 
 <<inital-ar4, echo=FALSE, fig.show='hold', fig.width=5, fig.height=5, out.width='.33\\textwidth', fig.cap='One draw, periodogram, and spectral density of an AR(4) model.', fig.pos='h'>>=
 g_draws.ar4
 g_perio.ar4
 g_spec.ar4
 @
 
-Unlike the IID Gaussian and AR(1) models, this AR(4) model does not have rejection rates all close to $\alpha$ for the independence and exponential tests at neighboring Fourier frequencies. At frequencies closer to zero, the pairwise independence tests fail at rates consistently higher than $\alpha$ and likewise, especially for frequencies less than one, the periodogram ordinates could not be considered to be asymptotically exponentially distributed, see figure~\ref{fig:tests-ar4}. Constructing a sparce subset of Fourier frequencies near zero would not result in asymptotically exponential periodogram ordinates at these frequencies. This is a shortcoming of limiting our method to only looking at differently spaced Fourier frequencies. In this paper, we explore if sparcifying frequencies near zero would satisfy asymptotic independence, see section~\ref{sec:sparce}. Howevever future work could address the question of asymptotic distribution by spacing of non-Fourier frequencies.
+Unlike the IID Gaussian and AR(1) models, this AR(4) model does not have rejection rates all similar to $\alpha$ for the independence and exponential tests at neighboring Fourier frequencies. At frequencies closer to zero, the pairwise independence tests fail at rates consistently higher than $\alpha$ and likewise, especially for frequencies less than one, the periodogram ordinates could not be considered to be asymptotically exponentially distributed, see figure~\ref{fig:tests-ar4}. Constructing a sparce subset of Fourier frequencies near zero would not result in asymptotically exponential periodogram ordinates at these frequencies. This is a shortcoming of limiting our method to only looking at differently spaced Fourier frequencies. In this paper, we explore if sparcifying frequencies near zero would satisfy asymptotic independence; see section~\ref{sec:sparce}. Howevever future work could address the question of asymptotic distribution by spacing of non-Fourier frequencies.
 
 <<tests-ar4, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an AR(4) model.', fig.pos='h'>>=
 g_ind.ar4
@@ -66,7 +67,7 @@ g_perio.ma1
 g_spec.ma1
 @
 
-The tests of independence seemed to give relatively similar rejection rates to $\alpha$, (figure~\ref{fig:tests-ma1}) indicating no serious departure from pairwise independence at the neighboring Fourier frequencies. The Kolmogorov-Smirnov test gave reasonable rejection rates except for frequencies nearing $\pi$. This was the opposite of what was seen with the AR(4) model, and as sparcifying the Fourier frequencies would not result in asymptotically independent exponentially distributed periodogram ordinates at the these frequencies, the Fourier frequencies nearing $\pi$ would need to be excluded. These frequencies did not appear to be as important in the periodogram in figure~\ref{fig:inital-ma1}, so it could be reasonable to proceed with a subset of frequencies of this type to use in Bayesian modeling of the spectral density. 
+The tests of independence gave relatively similar rejection rates to $\alpha$, (figure~\ref{fig:tests-ma1}) indicating no serious departure from pairwise independence at the neighboring Fourier frequencies. The Kolmogorov-Smirnov test gave reasonable rejection rates except for frequencies nearing $\pi$. This was the opposite of what was seen with the AR(4) model, and as sparcifying the Fourier frequencies would not result in asymptotically independent exponentially distributed periodogram ordinates at the these frequencies, the Fourier frequencies nearing $\pi$ would need to be excluded. These frequencies did not appear to be as important in the periodogram in figure~\ref{fig:inital-ma1}, so it could be reasonable to proceed with a subset of frequencies of this type to use in Bayesian modeling of the spectral density. 
 
 <<tests-ma1, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an MA(1) model.', fig.pos='h'>>=
 g_ind.ma1
@@ -86,7 +87,7 @@ g_exp.ma1
 % @
 % 
 \subsubsection{ARMA(4,1)}
-Lastly, we considered an ARMA model with both autoregressive and moving average components. A time series with this behavior has the form 
+Lastly, we considered an ARMA model with both autoregressive (AR) and moving average (MA) components. A time series with this behavior has the form 
 \begin{align}
 X_t = \phi_1 X_{t-1} + \phi_2 X_{t-2} + \phi_3 X_{t-3} + \phi_4 X_{t-4} + Z_t + \theta Z_{t-1}
 \end{align}
@@ -97,7 +98,7 @@ g_perio.arma41
 g_spec.arma41
 @
 
-This ARMA model failed the pairwise Spearman rank correlation tests at frequencies close to zero, in a similar fashion as the AR(4) model. An attempt at sparcifying frequencies close to zero could be made to satisfy the independence conditions of Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is violated at the majority of the Fourier frequencies, as seen in figure~\ref{fig:tests-arma41}. The combination of similar results from the AR(4) at frequencies near to zero, and failures at frequences near to $\pi$ from the the MA(1) model result in the ARMA(4,1) satisfying asymptotic exponential distributional properties only at frequencies near $\pi/2$. Once again, this issue is not able to be resolved by our proposed method and would need to be explored at non-Fourier frequencies.
+This ARMA model failed the pairwise Spearman rank correlation tests at frequencies close to zero, in a similar fashion as the AR(4) model. An attempt at sparcifying frequencies close to zero could be made to satisfy the independence conditions of Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is violated at the majority of the Fourier frequencies, as seen in figure~\ref{fig:tests-arma41}. The combination of similar results from the AR(4) at frequencies near to zero and failures at frequences near to $\pi$ from the the MA(1) model result in the ARMA(4,1) satisfying asymptotic exponential distributional properties only at frequencies near $\pi/2$. Once again, this issue can not be resolved by our proposed method and would need to be explored at non-Fourier frequencies.
 
 <<tests-arma41, echo=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of independence and distribution for an ARMA(4,1) model.', fig.pos='h'>>=
 g_ind.arma41
@@ -117,7 +118,7 @@ g_exp.arma41
 % @
 
 \subsection{Sparce Frequencies for AR(4)} \label{sec:sparce}
-Lahiri's result~\ref{res:lahiri} suggests that, for sparce frequencies and dense frequencies distant from zero, asymptotic independence should hold. We attempted to apply this concept to the AR(4) model to see if we could find a subset where pairwise independence would hold at all frequencies. In figure~\ref{fig:tests-ar4}, asymptotic independence appeared to be satisfied at frequencies roughly larger than $2 \pi*60/500$.  Therefore, we retained all the Fourier frequencies greater than $2 \pi*60/500$ and focused on evenly spaced subsets of frequencies from $2\pi/500$ to $2\pi*60/500$. We considered all possible subsets of Fourier frequencies from $2\pi/500$ to $2\pi* 60/500$ and tested the pairwise independence for each. Choice of starting frequency for each subset was also considered. For example, removing every other frequency would result in two possible subsets, one beginning at $2\pi/500$, the other at $2\pi*2/500$. Examples of spacing frequencies by one (keep every other frequency) and spacing frequencies by two (keep every third frequency) subsets and the rejection rates for pairwise tests of independence are shown in figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4}.
+Lahiri's result~\ref{res:lahiri} suggests that, for sparce frequencies and dense frequencies distant from zero, asymptotic independence should hold. We attempted to apply this concept to the AR(4) model to see if we could find a subset where pairwise independence would hold at all frequencies. In figure~\ref{fig:tests-ar4}, asymptotic independence appeared to be satisfied at frequencies roughly larger than $2 \pi*60/500$.  Therefore, we retained all the Fourier frequencies greater than $2 \pi*60/500$ and focused on evenly spaced subsets of frequencies from $2\pi/500$ to $2\pi*60/500$. We considered all possible subsets of Fourier frequencies from $2\pi/500$ to $2\pi* 60/500$ and tested the pairwise independence for each. Choice of starting frequency for each subset was also considered. For example, removing every other frequency would result in two possible subsets, one beginning at $2\pi/500$, the other at $2\pi*2/500$. Examples of spacing frequencies by one (keep every other frequency) subsets and spacing frequencies by two (keep every third frequency) subsets and the rejection rates for pairwise tests of independence are shown in figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4}.
 
 <<space1-ar4, echo=FALSE, message=FALSE, warning=FALSE, fig.show='hold', fig.width=7, fig.height=5, out.width='.49\\textwidth', fig.cap='Tests of pairwise independence for every other Fourier frequency starting at the first and second Fourier frequencies, respectively, including the remaining full set of Fourier frequencies.', fig.pos='h'>>=
 g_space1a.ar4
@@ -130,4 +131,4 @@ g_space2b.ar4
 g_space2c.ar4
 @
 
-The pairwise rejection rates for the subsets shown in figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4} decrease slightly from that in figure~\ref{fig:tests-ar4} but still show higher rejection rates than the $\alpha$-level of 0.05. It could be argued that for frequencies roughly greater than $2\pi * 30/500$ in the second subset of every other spacings shown in figure~\ref{fig:space1-ar4}, the asymptotic independence assumption holds. However, considering all other possible spacings between frequencies, we were unable to find a subset that resulted in pairwise independence at frequencies less that $2\pi * 30/500$. This could indicate that frequencies greater than $2 \pi * 25/500$ are sufficiently ``distant from zero", satisfying result~\ref{res:lahiri}. Therefore, a subset of Fourier frequencies where the asymptotic independence result could reasonable be thought to hold would be $\{\omega_j=2\pi j/500, j=30,32,34,...,60\} \cup \{\omega_j=2\pi j/500, j=61,62,...,249\}$. Unfortunately, the estimated periodograms for time series of this AR(4) class are dominated by frequencies very close to 0, figure~\ref{fig:inital-ar4}, so this subset would not be practical to use in a Bayesian analysis, or any analysis of the spectral density. 
+The pairwise rejection rates for the subsets shown in figures~\ref{fig:space1-ar4} and~\ref{fig:space2-ar4} decrease slightly from that in figure~\ref{fig:tests-ar4} but still show higher rejection rates than the $\alpha$-level of 0.05. It could be argued that for frequencies roughly greater than $2\pi * 30/500$ in the second subset of every other spacings shown in figure~\ref{fig:space1-ar4}, the asymptotic independence assumption holds. However, considering all other possible spacings between frequencies, we were unable to find a subset that resulted in pairwise independence at frequencies less that $2\pi * 30/500$. This could indicate that frequencies greater than $2 \pi * 25/500$ are sufficiently ``distant from zero", satisfying result~\ref{res:lahiri}. Therefore, a subset of Fourier frequencies where the asymptotic independence result would reasonably hold would be $\{\omega_j=2\pi j/500, j=30,32,34,...,60\} \cup \{\omega_j=2\pi j/500, j=61,62,...,249\}$. Unfortunately, the estimated periodograms for time series of this AR(4) class are dominated by frequencies very close to 0, figure~\ref{fig:inital-ar4}, so this subset would not be practical for a Bayesian analysis, or any analysis of the spectral density. 

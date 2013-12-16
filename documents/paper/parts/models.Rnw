@@ -1,10 +1,10 @@
-To explore the asymptotic behavior of the periodogram at the Fourier frequencies, we used ARMA time series models as these are the only class of models with known spectral densities. A subset of the models considered are \begin{inparaenum}[\itshape a\upshape)]
+To explore the asymptotic behavior of the periodogram at the Fourier frequencies, we used ARMA time series models, as these are the only class of models with known spectral densities. A subset of the models considered are: \begin{inparaenum}[\itshape a\upshape)]
 \item IID Gaussian(0, \Sexpr{sigma2});
 \item AR(1) with $\phi = \Sexpr{model.ar1$ar}$; 
 \item AR(4) with $\boldsymbol{\phi} = [\Sexpr{paste(model.ar4$ar, collapse=", ")}$];
 \item MA(1) with $\theta = \Sexpr{model.ma1$ma}$; and
 %\item MA(2) with $\boldsymbol{\theta} = [\Sexpr{paste(model.ma2$ma, collapse=", ")}$];
-\item ARMA(4,1) with $\boldsymbol{\phi} = [\Sexpr{paste(model.arma41$ar, collapse=", ")}$] and $\theta = \Sexpr{model.arma41$ma}$
+\item ARMA(4,1) with $\boldsymbol{\phi} = [\Sexpr{paste(model.arma41$ar, collapse=", ")}$] and $\theta = \Sexpr{model.arma41$ma}$.
 %\item ARMA(4,2) with $\boldsymbol{\phi} = [\Sexpr{paste(model.arma42$ar, collapse=", ")}$] and $\boldsymbol{\theta} = [\Sexpr{paste(model.arma42$ma, collapse=", ")}$].
 \end{inparaenum}
 
