@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.2 $
+% $ biblatex version 2.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -39,21 +39,24 @@
   \field{year}{2002}
 \endentry
 
-\entry{conover1998practical}{article}{}
+\entry{conover1998practical}{book}{}
   \name{author}{1}{}{%
     {{}%
      {Conover}{C.}%
-     {William~Jay}{W.~J.}%
+     {William~J}{W.~J.}%
      {}{}%
      {}{}}%
   }
   \list{publisher}{1}{%
-    {$\{$John Wiley \& Sons$\}$}%
+    {Wiley}%
   }
   \strng{namehash}{CWJ1}
   \strng{fullhash}{CWJ1}
   \field{sortinit}{C}
   \field{title}{Practical nonparametric statistics}
+  \list{location}{1}{%
+    {New York, Chichester}%
+  }
   \field{year}{1998}
 \endentry
 

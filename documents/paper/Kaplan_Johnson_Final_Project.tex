@@ -1,4 +1,4 @@
-\documentclass{article}\usepackage{graphicx, color}
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -11,21 +11,16 @@
 }
 \makeatother
 
-\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
-\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
-\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
-\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
-\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
-\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
-\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
-\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
-\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
-\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
-\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
-\newcommand{\hlslot}[1]{\textit{#1}}%
-\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
 
 \usepackage{framed}
 \makeatletter
@@ -411,7 +406,7 @@ This research focused on assessing asymptotic independence and exponential distr
 
 It should be noted that if a set of random variables are all pairwise independent, this does not imply they are jointly independent. In our tests of asymptotic independence, it is possible that in models in which we found an indication of pairwise asymptotic independence, a higher order dependent structure was still present. The use of pairwise independence tests also presented a multiple comparison issue which we have not accounted for here. To test all possible pairs of Fourier frequencies, $\sum_{i=1}^k (k-1)$ pairwise tests are required where $k=\lfloor\frac{n-1}{2}\rfloor$. A familywise error rate correction such as Bonferroni may be too conservative in this application, so other multiple comparison corrections should be considered if pairwise independence is to be used to assess asymptotic independence of the periodogram.
 
-In this paper we have focused largely on the assumption of asymptotic independence and the results by Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is equally as important if one were to implement a Bayesian analysis of the spectral density. If our tests of distribution failed at one or more frequencies, the subset of Fourier frequencies that could produce asymptotically independent exponential periodogram ordinates could not include these frequencies. In models such as the MA(2) and ARMA(4,1) we considered, this was a very large number of frequencies and therefore, using the Fourier frequencies for these specific models in a Bayesian analysis would be incredibly non-Fourier frequencies near zero. However, the benefit of this option has not been explored.
+In this paper we have focused largely on the assumption of asymptotic independence and the results by Lahiri~\ref{res:lahiri}. However, the asymptotic exponential assumption is equally as important if one were to implement a Bayesian analysis of the spectral density. If our tests of distribution failed at one or more frequencies, the subset of Fourier frequencies that could produce asymptotically independent exponential periodogram ordinates could not include these frequencies. In models such as the MA(2) and ARMA(4,1) we considered, this was a very large number of frequencies and therefore, using the Fourier frequencies for these specific models in a Bayesian analysis would be incredibly ineffective. In order to address the issue of asymptotic exponential distributions, we could examine spacings of non-Fourier frequencies near zero. However, the benefit of this option has not been explored.
 
 Additionally, our research focused only on stationary ARMA time series due to the known closed-form of the spectral density function in these models. It should be noted that in more interesting cases, i.e. models with a seasonal structure, these models do not have known closed-form spectral densities, and thus we were unable to include them in this research. This is because without the values of the spectral density at tested frequencies, we would be unable to use the KS test for distributional fit. There are two alternatives that can be visited in future work. The first is using an unbiased and consistent estimator of the spectral density (like a window estimator \cite{brockwell2002introduction}) as the mean of the scaled periodogram. A sensitivity analysis could be conducted to determine bandwidth. The second is to use a modification of the KS test called the Lilliefors test for the exponential distribution. This test is designed to test the null hyptothesis, $H_0: \text{The random sample has the exponential distribution with unknown mean}$, against the alternative hypothesis, $H_1: \text{The distribution is not exponential}$ \cite{conover1998practical}. At the time of this writing, the Lilliefors test is not implemented in R. Through the use of one of these modifications, it may be possible to apply this method to models with a more general structure.
 
